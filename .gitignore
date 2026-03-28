@@ -1,4 +1,6 @@
 __pycache__/
 *.log
 .env
-config.py  # If this contains your trading keys
+config.py
+trade_log.txt
+logs/
