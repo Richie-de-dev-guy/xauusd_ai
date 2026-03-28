@@ -1,0 +1,270 @@
+[2026-03-16 16:36:08] INFO - XAUUSD | Bid: 4996.74 | Ask: 4996.98 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:36:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:37:08] INFO - XAUUSD | Bid: 4999.04 | Ask: 4999.28 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:37:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:38:08] INFO - XAUUSD | Bid: 4999.35 | Ask: 4999.59 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:38:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:39:08] INFO - XAUUSD | Bid: 5001.59 | Ask: 5001.83 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:39:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:40:08] INFO - XAUUSD | Bid: 4999.90 | Ask: 5000.14 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:40:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:41:08] INFO - XAUUSD | Bid: 4999.16 | Ask: 4999.40 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:41:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:42:08] INFO - XAUUSD | Bid: 5000.93 | Ask: 5001.16 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:42:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:43:08] INFO - XAUUSD | Bid: 5002.15 | Ask: 5002.51 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:43:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:44:08] INFO - XAUUSD | Bid: 5001.29 | Ask: 5001.53 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:44:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:45:08] INFO - XAUUSD | Bid: 4996.22 | Ask: 4996.46 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:45:08] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:46:08] INFO - XAUUSD | Bid: 4995.95 | Ask: 4996.31 | Balance: 36.28 | Equity: 36.28
+[2026-03-16 16:46:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:47:09] INFO - XAUUSD | Bid: 4998.85 | Ask: 4999.09 | Balance: 36.28 | Equity: 36.16
+[2026-03-16 16:47:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:48:09] INFO - XAUUSD | Bid: 4997.35 | Ask: 4997.59 | Balance: 36.28 | Equity: 34.66
+[2026-03-16 16:48:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:49:09] INFO - XAUUSD | Bid: 4996.63 | Ask: 4996.87 | Balance: 36.28 | Equity: 33.78
+[2026-03-16 16:49:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:50:09] INFO - XAUUSD | Bid: 4993.59 | Ask: 4993.83 | Balance: 36.28 | Equity: 30.90
+[2026-03-16 16:50:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:51:09] INFO - XAUUSD | Bid: 4992.63 | Ask: 4992.87 | Balance: 36.28 | Equity: 29.94
+[2026-03-16 16:51:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:52:09] INFO - XAUUSD | Bid: 4991.89 | Ask: 4992.13 | Balance: 36.28 | Equity: 29.20
+[2026-03-16 16:52:09] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 16:53:09] WARNING - Daily drawdown limit reached: 30.65%. Pausing trading for today.
+[2026-03-16 16:53:09] DEBUG - Telegram message sent successfully.
+[2026-03-16 16:54:09] WARNING - Daily drawdown limit reached: 26.19%. Pausing trading for today.
+[2026-03-16 16:54:10] DEBUG - Telegram message sent successfully.
+[2026-03-16 16:55:10] WARNING - Daily drawdown limit reached: 32.52%. Pausing trading for today.
+[2026-03-16 16:55:12] DEBUG - Telegram message sent successfully.
+[2026-03-16 16:56:12] WARNING - Daily drawdown limit reached: 32.52%. Pausing trading for today.
+[2026-03-16 16:56:15] DEBUG - Telegram message sent successfully.
+[2026-03-16 16:57:15] WARNING - Daily drawdown limit reached: 26.98%. Pausing trading for today.
+[2026-03-16 16:57:17] DEBUG - Telegram message sent successfully.
+[2026-03-16 16:58:17] WARNING - Daily drawdown limit reached: 35.56%. Pausing trading for today.
+[2026-03-16 16:58:17] DEBUG - Telegram message sent successfully.
+[2026-03-16 16:59:17] WARNING - Daily drawdown limit reached: 35.89%. Pausing trading for today.
+[2026-03-16 16:59:18] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:00:18] WARNING - Daily drawdown limit reached: 35.45%. Pausing trading for today.
+[2026-03-16 17:00:19] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:01:19] WARNING - Daily drawdown limit reached: 28.20%. Pausing trading for today.
+[2026-03-16 17:01:19] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:02:19] WARNING - Daily drawdown limit reached: 31.59%. Pausing trading for today.
+[2026-03-16 17:02:20] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:03:20] WARNING - Daily drawdown limit reached: 26.52%. Pausing trading for today.
+[2026-03-16 17:03:20] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:04:20] INFO - XAUUSD | Bid: 4991.32 | Ask: 4991.56 | Balance: 36.28 | Equity: 28.63
+[2026-03-16 17:04:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:05:21] WARNING - Daily drawdown limit reached: 26.90%. Pausing trading for today.
+[2026-03-16 17:05:21] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:06:21] INFO - XAUUSD | Bid: 4991.41 | Ask: 4991.65 | Balance: 36.28 | Equity: 28.72
+[2026-03-16 17:06:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:07:21] INFO - XAUUSD | Bid: 4992.15 | Ask: 4992.39 | Balance: 36.28 | Equity: 29.46
+[2026-03-16 17:07:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:08:21] INFO - XAUUSD | Bid: 4995.65 | Ask: 4996.02 | Balance: 36.28 | Equity: 32.97
+[2026-03-16 17:08:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:09:21] INFO - XAUUSD | Bid: 4993.36 | Ask: 4993.60 | Balance: 36.28 | Equity: 30.67
+[2026-03-16 17:09:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:10:21] INFO - XAUUSD | Bid: 4993.88 | Ask: 4994.12 | Balance: 36.28 | Equity: 31.19
+[2026-03-16 17:10:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:11:21] INFO - XAUUSD | Bid: 4995.45 | Ask: 4995.69 | Balance: 36.28 | Equity: 32.76
+[2026-03-16 17:11:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:12:21] INFO - XAUUSD | Bid: 4997.74 | Ask: 4997.98 | Balance: 36.28 | Equity: 35.05
+[2026-03-16 17:12:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:13:21] INFO - XAUUSD | Bid: 4997.95 | Ask: 4998.19 | Balance: 36.28 | Equity: 35.26
+[2026-03-16 17:13:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:14:21] INFO - XAUUSD | Bid: 4996.11 | Ask: 4996.35 | Balance: 36.28 | Equity: 33.43
+[2026-03-16 17:14:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:15:21] INFO - XAUUSD | Bid: 4997.02 | Ask: 4997.26 | Balance: 36.28 | Equity: 34.33
+[2026-03-16 17:15:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:16:21] INFO - XAUUSD | Bid: 4997.20 | Ask: 4997.56 | Balance: 36.28 | Equity: 34.51
+[2026-03-16 17:16:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:17:21] INFO - XAUUSD | Bid: 4994.55 | Ask: 4994.79 | Balance: 36.28 | Equity: 31.86
+[2026-03-16 17:17:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:18:21] INFO - XAUUSD | Bid: 4993.43 | Ask: 4993.67 | Balance: 36.28 | Equity: 30.74
+[2026-03-16 17:18:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:19:21] INFO - XAUUSD | Bid: 4994.44 | Ask: 4994.68 | Balance: 36.28 | Equity: 31.75
+[2026-03-16 17:19:21] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:20:21] INFO - XAUUSD | Bid: 4993.20 | Ask: 4993.44 | Balance: 36.28 | Equity: 30.51
+[2026-03-16 17:20:22] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:21:22] INFO - XAUUSD | Bid: 4991.44 | Ask: 4991.68 | Balance: 36.28 | Equity: 28.75
+[2026-03-16 17:21:22] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:22:22] WARNING - Daily drawdown limit reached: 27.89%. Pausing trading for today.
+[2026-03-16 17:22:22] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:23:22] INFO - XAUUSD | Bid: 4990.52 | Ask: 4990.76 | Balance: 36.28 | Equity: 27.83
+[2026-03-16 17:23:22] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-16 17:24:22] WARNING - Daily drawdown limit reached: 29.24%. Pausing trading for today.
+[2026-03-16 17:24:23] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:24:35] INFO - Bot stopped by user (Ctrl+C).
+[2026-03-16 17:24:36] DEBUG - Telegram message sent successfully.
+[2026-03-16 17:24:36] INFO - Disconnected from MT5.
+[2026-03-16 17:24:36] INFO - Bot shut down complete.
+[2026-03-17 09:20:39] INFO - ============================================================
+[2026-03-17 09:20:39] INFO - XAUUSD Trading Bot Starting...
+[2026-03-17 09:20:39] INFO - ============================================================
+[2026-03-17 09:20:39] INFO - Telegram notifications enabled.
+[2026-03-17 09:20:42] INFO - Connected to MT5 | Account: 223455100 | Server: Exness-MT5Real30 | Balance: 39.52
+[2026-03-17 09:20:42] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-03-17 09:20:42] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-03-17 09:20:42] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-03-17 09:20:42] INFO - Checking every 60 seconds...
+[2026-03-17 09:20:42] INFO - ------------------------------------------------------------
+[2026-03-17 09:20:45] DEBUG - Telegram message sent successfully.
+[2026-03-17 09:20:45] INFO - New day: 2026-03-17 | Starting balance: 39.52
+[2026-03-17 09:20:45] INFO - XAUUSD | Bid: 5026.68 | Ask: 5026.96 | Balance: 39.52 | Equity: 39.52
+[2026-03-17 09:20:46] INFO - BUY signal | EMA Fast: 5021.28 > EMA Slow: 5021.25 | RSI: 55.31 | ATR: 9.36
+[2026-03-17 09:20:46] INFO - Placing BUY order | Entry: 5026.96 | SL: 5012.92 | TP: 5055.04 | Volume: 0.01
+[2026-03-17 09:20:46] WARNING - BUY 0.01 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-03-17 09:21:08] INFO - BUY 0.01 XAUUSDm succeeded with filling mode: IOC
+[2026-03-17 09:21:08] INFO - Order placed | BUY 0.01 XAUUSDm @ 5026.96 | SL: 5012.92 | TP: 5055.04 | Ticket: 91713013
+2026-03-17 09:21:08 | BUY   | XAUUSDm | Vol: 0.01 | Price: 5026.96 | SL: 5012.92 | TP: 5055.04 | Ticket: 91713013
+[2026-03-17 09:21:08] INFO - Trade executed successfully! Ticket: 91713013
+[2026-03-17 09:21:18] WARNING - Telegram notification error: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8726094110:AAFc7ywwZ7h9QD9_4CUEKRYffaHk4d7-Uco/sendMessage (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.telegram.org', port=443) at 0x2363cac1a50>, 'Connection to api.telegram.org timed out. (connect timeout=10)'))
+[2026-03-17 09:22:18] INFO - XAUUSD | Bid: 5026.46 | Ask: 5026.74 | Balance: 39.52 | Equity: 39.79
+[2026-03-17 09:22:18] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-17 09:23:18] WARNING - Daily drawdown limit reached: 6.60%. Pausing trading for today.
+[2026-03-17 09:23:19] DEBUG - Telegram message sent successfully.
+[2026-03-17 09:24:19] WARNING - Daily drawdown limit reached: 7.67%. Pausing trading for today.
+[2026-03-17 09:24:20] DEBUG - Telegram message sent successfully.
+[2026-03-17 09:24:31] INFO - Bot stopped by user (Ctrl+C).
+[2026-03-17 09:24:32] DEBUG - Telegram message sent successfully.
+[2026-03-17 09:24:32] INFO - Disconnected from MT5.
+[2026-03-17 09:24:32] INFO - Bot shut down complete.
+[2026-03-24 11:16:57] INFO - ============================================================
+[2026-03-24 11:16:57] INFO - XAUUSD Trading Bot Starting...
+[2026-03-24 11:16:57] INFO - ============================================================
+[2026-03-24 11:16:57] INFO - Telegram notifications enabled.
+[2026-03-24 11:17:03] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-03-24 11:17:03] ERROR - Failed to connect to MT5. Exiting.
+[2026-03-24 11:17:04] DEBUG - Telegram message sent successfully.
+[2026-03-24 11:18:25] INFO - ============================================================
+[2026-03-24 11:18:25] INFO - XAUUSD Trading Bot Starting...
+[2026-03-24 11:18:25] INFO - ============================================================
+[2026-03-24 11:18:25] INFO - Telegram notifications enabled.
+[2026-03-24 11:18:30] INFO - Connected to MT5 | Account: 298854099 | Server: Exness-MT5Trial9 | Balance: 50000.0
+[2026-03-24 11:18:30] INFO - Symbol: XAUUSD | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-03-24 11:18:30] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-03-24 11:18:30] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-03-24 11:18:30] INFO - Checking every 60 seconds...
+[2026-03-24 11:18:30] INFO - ------------------------------------------------------------
+[2026-03-24 11:18:31] DEBUG - Telegram message sent successfully.
+[2026-03-24 11:18:31] INFO - New day: 2026-03-24 | Starting balance: 50000.00
+[2026-03-24 11:18:31] INFO - XAUUSD | Bid: 4431.08 | Ask: 4431.36 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:18:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:19:31] INFO - XAUUSD | Bid: 4430.78 | Ask: 4431.03 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:19:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:20:31] INFO - XAUUSD | Bid: 4428.65 | Ask: 4428.93 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:20:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:21:31] INFO - XAUUSD | Bid: 4431.10 | Ask: 4431.38 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:21:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:22:31] INFO - XAUUSD | Bid: 4426.28 | Ask: 4426.53 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:22:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:23:31] INFO - XAUUSD | Bid: 4428.25 | Ask: 4428.51 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:23:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:24:31] INFO - XAUUSD | Bid: 4425.02 | Ask: 4425.30 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:24:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:25:31] INFO - XAUUSD | Bid: 4426.07 | Ask: 4426.35 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:25:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:26:31] INFO - XAUUSD | Bid: 4424.52 | Ask: 4424.80 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:26:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:27:31] INFO - XAUUSD | Bid: 4423.41 | Ask: 4423.69 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:27:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:28:31] INFO - XAUUSD | Bid: 4423.80 | Ask: 4424.08 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:28:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:29:31] INFO - XAUUSD | Bid: 4421.89 | Ask: 4422.14 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:29:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:30:31] INFO - XAUUSD | Bid: 4420.33 | Ask: 4420.61 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:30:31] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:31:32] INFO - XAUUSD | Bid: 4421.05 | Ask: 4421.31 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:31:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:32:32] INFO - XAUUSD | Bid: 4419.12 | Ask: 4419.37 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:32:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:33:32] INFO - XAUUSD | Bid: 4417.62 | Ask: 4417.90 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:33:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:34:32] INFO - XAUUSD | Bid: 4417.43 | Ask: 4417.71 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:34:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:35:32] INFO - XAUUSD | Bid: 4415.30 | Ask: 4415.55 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:35:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:36:32] INFO - XAUUSD | Bid: 4419.39 | Ask: 4419.67 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:36:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:37:32] INFO - XAUUSD | Bid: 4421.65 | Ask: 4421.93 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:37:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:38:32] INFO - XAUUSD | Bid: 4421.59 | Ask: 4421.87 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:38:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:39:32] INFO - XAUUSD | Bid: 4423.94 | Ask: 4424.20 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:39:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:40:32] INFO - XAUUSD | Bid: 4423.20 | Ask: 4423.45 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:40:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:41:32] INFO - XAUUSD | Bid: 4424.00 | Ask: 4424.28 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:41:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:42:32] INFO - XAUUSD | Bid: 4423.02 | Ask: 4423.27 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:42:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:43:32] INFO - XAUUSD | Bid: 4426.16 | Ask: 4426.44 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:43:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:44:32] INFO - XAUUSD | Bid: 4425.92 | Ask: 4426.20 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:44:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:45:32] INFO - XAUUSD | Bid: 4426.40 | Ask: 4426.68 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:45:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:46:32] INFO - XAUUSD | Bid: 4428.03 | Ask: 4428.31 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:46:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:47:32] INFO - XAUUSD | Bid: 4426.76 | Ask: 4427.04 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:47:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:48:32] INFO - XAUUSD | Bid: 4423.81 | Ask: 4424.06 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:48:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:49:32] INFO - XAUUSD | Bid: 4420.52 | Ask: 4420.77 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:49:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:50:32] INFO - XAUUSD | Bid: 4419.78 | Ask: 4420.06 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:50:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:51:32] INFO - XAUUSD | Bid: 4427.33 | Ask: 4427.61 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:51:32] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:52:33] INFO - XAUUSD | Bid: 4425.92 | Ask: 4426.20 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:52:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:53:33] INFO - XAUUSD | Bid: 4431.50 | Ask: 4431.75 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:53:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:54:33] INFO - XAUUSD | Bid: 4429.12 | Ask: 4429.38 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:54:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:55:33] INFO - XAUUSD | Bid: 4427.20 | Ask: 4427.48 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:55:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:56:33] INFO - XAUUSD | Bid: 4434.60 | Ask: 4434.89 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:56:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:57:33] INFO - XAUUSD | Bid: 4437.86 | Ask: 4438.12 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:57:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:58:33] INFO - XAUUSD | Bid: 4440.54 | Ask: 4440.80 | Balance: 50000.00 | Equity: 50000.00
+[2026-03-24 11:58:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 11:59:34] INFO - XAUUSD | Bid: 4437.64 | Ask: 4437.92 | Balance: 50000.00 | Equity: 50000.42
+[2026-03-24 11:59:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:00:34] INFO - XAUUSD | Bid: 4439.02 | Ask: 4439.30 | Balance: 50000.00 | Equity: 50004.24
+[2026-03-24 12:00:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:01:34] INFO - XAUUSD | Bid: 4430.92 | Ask: 4431.24 | Balance: 50004.83 | Equity: 49114.51
+[2026-03-24 12:01:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:02:34] INFO - XAUUSD | Bid: 4406.39 | Ask: 4406.71 | Balance: 47184.60 | Equity: 47378.82
+[2026-03-24 12:02:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:03:34] INFO - XAUUSD | Bid: 4404.45 | Ask: 4404.73 | Balance: 47184.60 | Equity: 46792.20
+[2026-03-24 12:03:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:04:34] INFO - XAUUSD | Bid: 4401.36 | Ask: 4401.61 | Balance: 47184.60 | Equity: 45076.80
+[2026-03-24 12:04:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:05:34] INFO - XAUUSD | Bid: 4406.09 | Ask: 4406.44 | Balance: 48203.04 | Equity: 48222.39
+[2026-03-24 12:05:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:06:34] INFO - XAUUSD | Bid: 4410.44 | Ask: 4410.72 | Balance: 48203.04 | Equity: 50802.96
+[2026-03-24 12:06:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:07:34] INFO - XAUUSD | Bid: 4411.37 | Ask: 4411.62 | Balance: 50947.95 | Equity: 50947.95
+[2026-03-24 12:07:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:08:34] INFO - XAUUSD | Bid: 4416.22 | Ask: 4416.50 | Balance: 50947.95 | Equity: 50947.95
+[2026-03-24 12:08:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:09:34] INFO - XAUUSD | Bid: 4411.89 | Ask: 4412.17 | Balance: 50947.95 | Equity: 50828.45
+[2026-03-24 12:09:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:10:34] INFO - XAUUSD | Bid: 4415.67 | Ask: 4415.95 | Balance: 50947.95 | Equity: 51221.47
+[2026-03-24 12:10:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:11:34] INFO - XAUUSD | Bid: 4410.49 | Ask: 4410.75 | Balance: 50947.95 | Equity: 50671.93
+[2026-03-24 12:11:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:12:34] INFO - XAUUSD | Bid: 4412.06 | Ask: 4412.31 | Balance: 50947.95 | Equity: 50845.61
+[2026-03-24 12:12:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:13:34] INFO - XAUUSD | Bid: 4416.25 | Ask: 4416.53 | Balance: 50947.95 | Equity: 51281.58
+[2026-03-24 12:13:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:14:34] INFO - XAUUSD | Bid: 4418.36 | Ask: 4418.64 | Balance: 50947.95 | Equity: 51501.43
+[2026-03-24 12:14:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-03-24 12:14:56] INFO - Bot stopped by user (Ctrl+C).
+[2026-03-24 12:14:57] DEBUG - Telegram message sent successfully.
+[2026-03-24 12:14:57] INFO - Disconnected from MT5.
+[2026-03-24 12:14:57] INFO - Bot shut down complete.

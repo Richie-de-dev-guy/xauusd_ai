@@ -1,0 +1,4 @@
+__pycache__/
+*.log
+.env
+config.py  # If this contains your trading keys
