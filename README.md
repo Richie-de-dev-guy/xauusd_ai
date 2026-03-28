@@ -77,3 +77,26 @@ Press Ctrl+C in the terminal.
 - **Test on a demo account first** before going live
 - Keep MT5 running while the bot is active
 - For 24/7 operation, use a VPS (Exness offers free VPS for qualifying accounts)
+
+
+## 🚀 Frontend Collaboration Roadmap
+
+I am currently looking for a **Frontend Developer** to help transform this backend engine into a professional-grade trading dashboard. I am providing all **UI/UX Design, Brand Identity, and Figma Mockups**.
+
+### **Phase 1: Real-Time Monitoring (The Dashboard)**
+- [ ] **Live Trade Feed:** Create a component to stream active trades directly from the bot.
+- [ ] **Equity & Balance Tracker:** Visualizing the relationship between current balance and floating equity.
+- [ ] **Status Indicator:** A "Heartbeat" monitor to show the bot's connection status to MT5.
+
+### **Phase 2: Data Visualization**
+- [ ] **Performance Charts:** Integration with Lightweight Charts (TradingView) or Chart.js to show entry/exit points.
+- [ ] **Strategy Metrics:** Displaying Win/Loss ratios, average hold time, and ATR volatility stats.
+- [ ] **Log Viewer:** A searchable, filtered interface for the `trade_log.txt` file.
+
+### **Phase 3: Control & Configuration**
+- [ ] **Remote Config:** Interface to adjust EMA periods, RSI thresholds, and Risk % without touching the code.
+- [ ] **Emergency Kill-Switch:** A "Panic Button" to instantly close all open positions and pause the bot.
+- [ ] **Auth Layer:** Secure login for private access to the trading dashboard.
+
+---
+**Interested in collaborating?** Check out the current backend logic in `main_bot.py` and `strategy.py`, then shoot me a DM or open an issue!
