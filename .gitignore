@@ -1,6 +1,4 @@
 __pycache__/
 *.log
 .env
-config.py
-trade_log.txt
 logs/
