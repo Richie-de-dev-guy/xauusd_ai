@@ -3,8 +3,7 @@ XAUUSD Trading Bot - Main Entry Point
 ======================================
 Connects to Exness MT5, monitors XAUUSD, and executes trades
 based on EMA crossover + RSI + ATR strategy.
-Sends Telegram alerts for all trade activity including
-TP hits, SL hits, and manual closes.
+(Telegram Notifications Disabled)
 
 Usage: python main_bot.py
 """
@@ -17,16 +16,14 @@ import config
 from mt5_connector import MT5Connector
 from strategy import TradingStrategy
 from logger import setup_logger, log_trade
-from telegram_notifier import TelegramNotifier
 
 logger = setup_logger(config.LOG_FILE)
 
 
-def check_closed_positions(connector, tracked_tickets, telegram):
+def check_closed_positions(connector, tracked_tickets):
     """
     Compare currently open positions against tracked tickets.
     If a tracked ticket is no longer open, it was closed (by TP, SL, or manually).
-    Send a Telegram notification for each closed trade.
     """
     current_positions = connector.get_open_positions(
         symbol=config.SYMBOL, magic=config.MAGIC_NUMBER
@@ -48,12 +45,6 @@ def check_closed_positions(connector, tracked_tickets, telegram):
             if close_price is None:
                 close_price = 0.0
 
-            # Estimate profit based on direction
-            if trade_info["type"] == "BUY":
-                profit_points = close_price - trade_info["open_price"]
-            else:
-                profit_points = trade_info["open_price"] - close_price
-
             # Determine if it hit TP, SL, or was closed manually
             sl = trade_info["sl"]
             tp = trade_info["tp"]
@@ -72,22 +63,6 @@ def check_closed_positions(connector, tracked_tickets, telegram):
 
             logger.info(f"Trade closed | Ticket: {ticket} | {trade_info['type']} | "
                         f"Reason: {close_reason} | Close Price: {close_price:.2f}")
-
-            if telegram:
-                emoji = "🎯" if close_reason == "Take Profit Hit" else "🛑" if close_reason == "Stop Loss Hit" else "✋"
-                msg = (
-                    f"{emoji} <b>Trade Closed — {close_reason}</b>\n"
-                    "━━━━━━━━━━━━━━━━━━━━\n"
-                    f"Type: {trade_info['type']}\n"
-                    f"Symbol: {config.SYMBOL}\n"
-                    f"Volume: {trade_info['volume']}\n"
-                    f"Open Price: {trade_info['open_price']:.2f}\n"
-                    f"Close Price: {close_price:.2f}\n"
-                    f"SL: {sl:.2f} | TP: {tp:.2f}\n"
-                    f"Ticket: <code>{ticket}</code>\n"
-                    "━━━━━━━━━━━━━━━━━━━━"
-                )
-                telegram.send_message(msg)
 
     # Remove closed tickets from tracking
     for ticket in closed_tickets:
@@ -112,12 +87,6 @@ def main():
     logger.info("XAUUSD Trading Bot Starting...")
     logger.info("=" * 60)
 
-    # Initialize Telegram notifier
-    telegram = None
-    if config.TELEGRAM_ENABLED:
-        telegram = TelegramNotifier(config.TELEGRAM_BOT_TOKEN, config.TELEGRAM_CHAT_ID)
-        logger.info("Telegram notifications enabled.")
-
     # Initialize MT5 connection
     connector = MT5Connector(
         login=config.MT5_LOGIN,
@@ -128,8 +97,6 @@ def main():
 
     if not connector.connect():
         logger.error("Failed to connect to MT5. Exiting.")
-        if telegram:
-            telegram.notify_error("Failed to connect to MT5. Bot exiting.")
         sys.exit(1)
 
     # Initialize strategy
@@ -146,8 +113,6 @@ def main():
     symbol_info = connector.get_symbol_info(config.SYMBOL)
     if symbol_info is None:
         logger.error(f"Cannot get symbol info for {config.SYMBOL}. Exiting.")
-        if telegram:
-            telegram.notify_error(f"Cannot get symbol info for {config.SYMBOL}. Bot exiting.")
         connector.disconnect()
         sys.exit(1)
 
@@ -160,17 +125,6 @@ def main():
     logger.info(f"Risk: {config.RISK_PERCENT_PER_TRADE}% per trade | RR: 1:{config.TAKE_PROFIT_RR}")
     logger.info(f"Checking every {config.CHECK_INTERVAL_SECONDS} seconds...")
     logger.info("-" * 60)
-
-    # Send Telegram startup notification
-    account_info = connector.get_account_info()
-    if telegram and account_info:
-        telegram.notify_bot_started(
-            account=config.MT5_LOGIN,
-            server=config.MT5_SERVER,
-            balance=account_info["balance"],
-            symbol=config.SYMBOL,
-            strategy_info=strategy_info,
-        )
 
     # Track daily starting balance for drawdown check
     daily_start_balance = None
@@ -213,13 +167,11 @@ def main():
                     if daily_loss_pct >= config.MAX_DAILY_DRAWDOWN_PERCENT:
                         logger.warning(f"Daily drawdown limit reached: {daily_loss_pct:.2f}%. "
                                        f"Pausing trading for today.")
-                        if telegram:
-                            telegram.notify_drawdown_limit(daily_loss_pct)
                         time.sleep(config.CHECK_INTERVAL_SECONDS)
                         continue
 
                 # ---- CHECK FOR CLOSED POSITIONS (TP, SL, MANUAL) ----
-                tracked_tickets = check_closed_positions(connector, tracked_tickets, telegram)
+                tracked_tickets = check_closed_positions(connector, tracked_tickets)
 
                 # Get historical data
                 df = connector.get_rates(config.SYMBOL, config.TIMEFRAME, num_bars=100)
@@ -311,27 +263,11 @@ def main():
                         "sl": sl,
                         "tp": tp,
                     }
-
-                    # Send Telegram alert
-                    if telegram:
-                        telegram.notify_trade_opened(
-                            order_type=signal,
-                            symbol=config.SYMBOL,
-                            volume=volume,
-                            entry_price=entry_price,
-                            sl=sl,
-                            tp=tp,
-                            ticket=result.order,
-                        )
                 else:
                     logger.error("Trade execution failed.")
-                    if telegram:
-                        telegram.notify_error(f"Trade execution failed for {signal} {config.SYMBOL}")
 
             except Exception as e:
                 logger.error(f"Error in main loop: {e}")
-                if telegram:
-                    telegram.notify_error(f"Bot error: {e}")
 
             # Wait before next check
             time.sleep(config.CHECK_INTERVAL_SECONDS)
@@ -339,8 +275,6 @@ def main():
     except KeyboardInterrupt:
         logger.info("Bot stopped by user (Ctrl+C).")
     finally:
-        if telegram:
-            telegram.notify_bot_stopped()
         connector.disconnect()
         logger.info("Bot shut down complete.")
 

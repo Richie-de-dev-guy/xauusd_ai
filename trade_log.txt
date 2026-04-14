@@ -1,0 +1,712 @@
+[2026-04-13 10:35:37] INFO - ============================================================
+[2026-04-13 10:35:37] INFO - XAUUSD Trading Bot Starting...
+[2026-04-13 10:35:37] INFO - ============================================================
+[2026-04-13 10:36:47] INFO - ============================================================
+[2026-04-13 10:36:47] INFO - XAUUSD Trading Bot Starting...
+[2026-04-13 10:36:47] INFO - ============================================================
+[2026-04-13 10:36:51] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-13 10:36:51] ERROR - Failed to connect to MT5. Exiting.
+[2026-04-13 10:44:41] INFO - ============================================================
+[2026-04-13 10:44:41] INFO - XAUUSD Trading Bot Starting...
+[2026-04-13 10:44:41] INFO - ============================================================
+[2026-04-13 10:44:45] INFO - Connected to MT5 | Account: 435387461 | Server: Exness-MT5Trial9 | Balance: 60147.0
+[2026-04-13 10:44:45] ERROR - Failed to get symbol info for XAUUSD. Error: (-4, 'Terminal: Not found')
+[2026-04-13 10:44:45] ERROR - Cannot get symbol info for XAUUSD. Exiting.
+[2026-04-13 10:44:45] INFO - Disconnected from MT5.
+[2026-04-13 10:45:29] INFO - ============================================================
+[2026-04-13 10:45:29] INFO - XAUUSD Trading Bot Starting...
+[2026-04-13 10:45:29] INFO - ============================================================
+[2026-04-13 10:45:33] INFO - Connected to MT5 | Account: 435387461 | Server: Exness-MT5Trial9 | Balance: 60147.0
+[2026-04-13 10:45:33] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-04-13 10:45:33] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-04-13 10:45:33] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-04-13 10:45:33] INFO - Checking every 60 seconds...
+[2026-04-13 10:45:33] INFO - ------------------------------------------------------------
+[2026-04-13 10:45:33] INFO - New day: 2026-04-13 | Starting balance: 60147.00
+[2026-04-13 10:45:33] INFO - XAUUSD | Bid: 4715.89 | Ask: 4716.20 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:45:33] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:46:33] INFO - XAUUSD | Bid: 4712.17 | Ask: 4712.48 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:46:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:47:34] INFO - XAUUSD | Bid: 4713.20 | Ask: 4713.48 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:47:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:48:34] INFO - XAUUSD | Bid: 4714.21 | Ask: 4714.51 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:48:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:49:34] INFO - XAUUSD | Bid: 4713.78 | Ask: 4714.09 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:49:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:50:34] INFO - XAUUSD | Bid: 4713.30 | Ask: 4713.69 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:50:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:51:34] INFO - XAUUSD | Bid: 4716.02 | Ask: 4716.30 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:51:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:52:34] INFO - XAUUSD | Bid: 4715.69 | Ask: 4716.00 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:52:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:53:34] INFO - XAUUSD | Bid: 4716.35 | Ask: 4716.71 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:53:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:54:34] INFO - XAUUSD | Bid: 4714.52 | Ask: 4714.82 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:54:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:55:34] INFO - XAUUSD | Bid: 4715.18 | Ask: 4715.49 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:55:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:56:34] INFO - XAUUSD | Bid: 4716.50 | Ask: 4716.78 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:56:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:57:34] INFO - XAUUSD | Bid: 4715.45 | Ask: 4715.73 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:57:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:58:34] INFO - XAUUSD | Bid: 4715.45 | Ask: 4715.76 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:58:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 10:59:34] INFO - XAUUSD | Bid: 4714.97 | Ask: 4715.28 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 10:59:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:00:34] INFO - XAUUSD | Bid: 4715.99 | Ask: 4716.27 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 11:00:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:01:34] INFO - XAUUSD | Bid: 4715.07 | Ask: 4715.38 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 11:01:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:02:34] INFO - XAUUSD | Bid: 4716.79 | Ask: 4717.10 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 11:02:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:03:34] INFO - XAUUSD | Bid: 4715.76 | Ask: 4716.07 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 11:03:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:04:34] INFO - XAUUSD | Bid: 4714.87 | Ask: 4715.18 | Balance: 60147.00 | Equity: 60147.00
+[2026-04-13 11:04:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:05:34] INFO - XAUUSD | Bid: 4713.86 | Ask: 4714.17 | Balance: 60147.00 | Equity: 59925.07
+[2026-04-13 11:05:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:06:34] INFO - XAUUSD | Bid: 4715.20 | Ask: 4715.48 | Balance: 60147.00 | Equity: 60064.63
+[2026-04-13 11:06:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:07:34] INFO - XAUUSD | Bid: 4714.78 | Ask: 4715.09 | Balance: 60147.00 | Equity: 60020.75
+[2026-04-13 11:07:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:08:34] INFO - XAUUSD | Bid: 4715.96 | Ask: 4716.27 | Balance: 60147.00 | Equity: 60143.67
+[2026-04-13 11:08:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:09:34] INFO - XAUUSD | Bid: 4716.16 | Ask: 4716.47 | Balance: 60147.00 | Equity: 60164.27
+[2026-04-13 11:09:34] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:10:35] INFO - XAUUSD | Bid: 4717.28 | Ask: 4717.67 | Balance: 60147.00 | Equity: 60280.64
+[2026-04-13 11:10:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:11:35] INFO - XAUUSD | Bid: 4716.81 | Ask: 4717.21 | Balance: 60147.00 | Equity: 60232.07
+[2026-04-13 11:11:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:12:35] INFO - XAUUSD | Bid: 4717.05 | Ask: 4717.33 | Balance: 60147.00 | Equity: 60256.51
+[2026-04-13 11:12:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:13:35] INFO - XAUUSD | Bid: 4717.42 | Ask: 4717.70 | Balance: 60147.00 | Equity: 60295.31
+[2026-04-13 11:13:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:14:35] INFO - XAUUSD | Bid: 4718.86 | Ask: 4719.16 | Balance: 60147.00 | Equity: 60444.86
+[2026-04-13 11:14:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:15:35] INFO - XAUUSD | Bid: 4716.31 | Ask: 4716.62 | Balance: 60147.00 | Equity: 60180.39
+[2026-04-13 11:15:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:16:35] INFO - XAUUSD | Bid: 4713.34 | Ask: 4713.64 | Balance: 60147.00 | Equity: 59870.57
+[2026-04-13 11:16:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:17:35] INFO - XAUUSD | Bid: 4713.73 | Ask: 4714.04 | Balance: 60147.00 | Equity: 59911.75
+[2026-04-13 11:17:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:18:35] INFO - XAUUSD | Bid: 4713.36 | Ask: 4713.67 | Balance: 60147.00 | Equity: 59873.17
+[2026-04-13 11:18:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:19:35] INFO - XAUUSD | Bid: 4713.15 | Ask: 4713.45 | Balance: 60147.00 | Equity: 59851.02
+[2026-04-13 11:19:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:20:35] INFO - XAUUSD | Bid: 4713.39 | Ask: 4713.70 | Balance: 60147.00 | Equity: 59876.19
+[2026-04-13 11:20:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:21:35] INFO - XAUUSD | Bid: 4712.80 | Ask: 4713.11 | Balance: 60147.00 | Equity: 59815.03
+[2026-04-13 11:21:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:22:35] INFO - XAUUSD | Bid: 4713.58 | Ask: 4713.89 | Balance: 60147.00 | Equity: 59895.74
+[2026-04-13 11:22:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:23:35] INFO - XAUUSD | Bid: 4712.42 | Ask: 4712.72 | Balance: 60147.00 | Equity: 59774.99
+[2026-04-13 11:23:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:24:35] INFO - XAUUSD | Bid: 4711.84 | Ask: 4712.15 | Balance: 60147.00 | Equity: 59714.88
+[2026-04-13 11:24:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:25:35] INFO - XAUUSD | Bid: 4710.23 | Ask: 4710.54 | Balance: 60147.00 | Equity: 59547.96
+[2026-04-13 11:25:35] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:26:36] INFO - XAUUSD | Bid: 4709.67 | Ask: 4709.97 | Balance: 60147.00 | Equity: 59488.99
+[2026-04-13 11:26:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:27:36] INFO - XAUUSD | Bid: 4708.76 | Ask: 4709.04 | Balance: 60147.00 | Equity: 59394.87
+[2026-04-13 11:27:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:28:36] INFO - XAUUSD | Bid: 4711.56 | Ask: 4711.86 | Balance: 60147.00 | Equity: 59685.55
+[2026-04-13 11:28:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:29:36] INFO - XAUUSD | Bid: 4711.47 | Ask: 4711.77 | Balance: 60147.00 | Equity: 59676.19
+[2026-04-13 11:29:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:30:36] INFO - XAUUSD | Bid: 4713.30 | Ask: 4713.57 | Balance: 60147.00 | Equity: 59866.41
+[2026-04-13 11:30:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:31:36] INFO - XAUUSD | Bid: 4711.88 | Ask: 4712.18 | Balance: 60147.00 | Equity: 59718.83
+[2026-04-13 11:31:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:32:36] INFO - XAUUSD | Bid: 4712.35 | Ask: 4712.66 | Balance: 60147.00 | Equity: 59768.44
+[2026-04-13 11:32:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:33:36] INFO - XAUUSD | Bid: 4712.74 | Ask: 4713.05 | Balance: 60147.00 | Equity: 59808.79
+[2026-04-13 11:33:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:34:36] INFO - XAUUSD | Bid: 4714.79 | Ask: 4715.10 | Balance: 60147.00 | Equity: 60021.79
+[2026-04-13 11:34:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:35:36] INFO - XAUUSD | Bid: 4716.61 | Ask: 4716.92 | Balance: 60147.00 | Equity: 60211.59
+[2026-04-13 11:35:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:36:36] INFO - XAUUSD | Bid: 4716.22 | Ask: 4716.53 | Balance: 60147.00 | Equity: 60171.03
+[2026-04-13 11:36:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:37:36] INFO - XAUUSD | Bid: 4715.24 | Ask: 4715.55 | Balance: 60147.00 | Equity: 60068.69
+[2026-04-13 11:37:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:38:36] INFO - XAUUSD | Bid: 4716.19 | Ask: 4716.47 | Balance: 60147.00 | Equity: 60167.18
+[2026-04-13 11:38:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:39:36] INFO - XAUUSD | Bid: 4716.46 | Ask: 4716.77 | Balance: 60147.00 | Equity: 60195.99
+[2026-04-13 11:39:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:40:36] INFO - XAUUSD | Bid: 4716.03 | Ask: 4716.31 | Balance: 60147.00 | Equity: 60150.64
+[2026-04-13 11:40:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:41:36] INFO - XAUUSD | Bid: 4715.66 | Ask: 4715.97 | Balance: 60147.00 | Equity: 60112.89
+[2026-04-13 11:41:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:42:36] INFO - XAUUSD | Bid: 4716.28 | Ask: 4716.56 | Balance: 60147.00 | Equity: 60176.95
+[2026-04-13 11:42:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:43:36] INFO - XAUUSD | Bid: 4716.34 | Ask: 4716.62 | Balance: 60147.00 | Equity: 60182.88
+[2026-04-13 11:43:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:44:36] INFO - XAUUSD | Bid: 4717.66 | Ask: 4717.97 | Balance: 60147.00 | Equity: 60320.47
+[2026-04-13 11:44:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:45:36] INFO - XAUUSD | Bid: 4718.47 | Ask: 4718.78 | Balance: 60147.00 | Equity: 60404.61
+[2026-04-13 11:45:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:46:36] INFO - XAUUSD | Bid: 4719.28 | Ask: 4719.59 | Balance: 60147.00 | Equity: 60489.06
+[2026-04-13 11:46:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:47:36] INFO - XAUUSD | Bid: 4720.30 | Ask: 4720.61 | Balance: 60147.00 | Equity: 60595.24
+[2026-04-13 11:47:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:48:36] INFO - XAUUSD | Bid: 4721.54 | Ask: 4721.85 | Balance: 60147.00 | Equity: 60724.10
+[2026-04-13 11:48:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:49:36] INFO - XAUUSD | Bid: 4720.78 | Ask: 4721.09 | Balance: 60147.00 | Equity: 60644.75
+[2026-04-13 11:49:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:50:36] INFO - XAUUSD | Bid: 4720.92 | Ask: 4721.20 | Balance: 60147.00 | Equity: 60659.31
+[2026-04-13 11:50:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:51:36] INFO - XAUUSD | Bid: 4723.43 | Ask: 4723.74 | Balance: 60147.00 | Equity: 60920.55
+[2026-04-13 11:51:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:52:36] INFO - XAUUSD | Bid: 4722.43 | Ask: 4722.71 | Balance: 60147.00 | Equity: 60816.55
+[2026-04-13 11:52:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:53:36] INFO - XAUUSD | Bid: 4722.41 | Ask: 4722.71 | Balance: 60147.00 | Equity: 60813.95
+[2026-04-13 11:53:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:54:36] INFO - XAUUSD | Bid: 4721.85 | Ask: 4722.16 | Balance: 60147.00 | Equity: 60756.55
+[2026-04-13 11:54:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:55:36] INFO - XAUUSD | Bid: 4720.05 | Ask: 4720.33 | Balance: 60147.00 | Equity: 60569.35
+[2026-04-13 11:55:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:56:36] INFO - XAUUSD | Bid: 4719.52 | Ask: 4719.83 | Balance: 60147.00 | Equity: 60513.81
+[2026-04-13 11:56:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:57:36] INFO - XAUUSD | Bid: 4720.69 | Ask: 4720.99 | Balance: 60147.00 | Equity: 60635.07
+[2026-04-13 11:57:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:58:36] INFO - XAUUSD | Bid: 4720.83 | Ask: 4721.11 | Balance: 60147.00 | Equity: 60650.36
+[2026-04-13 11:58:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 11:59:36] INFO - XAUUSD | Bid: 4721.67 | Ask: 4721.95 | Balance: 60147.00 | Equity: 60737.10
+[2026-04-13 11:59:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:00:36] INFO - XAUUSD | Bid: 4722.10 | Ask: 4722.41 | Balance: 60147.00 | Equity: 60782.13
+[2026-04-13 12:00:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:01:36] INFO - XAUUSD | Bid: 4722.26 | Ask: 4722.56 | Balance: 60147.00 | Equity: 60798.35
+[2026-04-13 12:01:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:02:36] INFO - XAUUSD | Bid: 4723.07 | Ask: 4723.38 | Balance: 60147.00 | Equity: 60883.01
+[2026-04-13 12:02:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:03:36] INFO - XAUUSD | Bid: 4723.78 | Ask: 4724.09 | Balance: 60147.00 | Equity: 60956.54
+[2026-04-13 12:03:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:04:36] INFO - XAUUSD | Bid: 4724.75 | Ask: 4725.06 | Balance: 60147.00 | Equity: 61057.73
+[2026-04-13 12:04:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:05:36] INFO - XAUUSD | Bid: 4726.52 | Ask: 4726.83 | Balance: 60147.00 | Equity: 61241.91
+[2026-04-13 12:05:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:06:36] INFO - XAUUSD | Bid: 4727.43 | Ask: 4727.74 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:06:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:07:36] INFO - XAUUSD | Bid: 4726.55 | Ask: 4726.86 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:07:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:08:36] INFO - XAUUSD | Bid: 4724.30 | Ask: 4724.61 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:08:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:09:36] INFO - XAUUSD | Bid: 4723.63 | Ask: 4723.94 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:09:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:10:36] INFO - XAUUSD | Bid: 4723.05 | Ask: 4723.35 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:10:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:11:36] INFO - XAUUSD | Bid: 4722.88 | Ask: 4723.19 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:11:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:12:36] INFO - XAUUSD | Bid: 4720.40 | Ask: 4720.71 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:12:36] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:13:37] INFO - XAUUSD | Bid: 4720.42 | Ask: 4720.73 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:13:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:14:37] INFO - XAUUSD | Bid: 4720.88 | Ask: 4721.19 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:14:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:15:37] INFO - XAUUSD | Bid: 4721.05 | Ask: 4721.36 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:15:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:16:37] INFO - XAUUSD | Bid: 4720.92 | Ask: 4721.23 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:16:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:17:37] INFO - XAUUSD | Bid: 4721.86 | Ask: 4722.17 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:17:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:18:37] INFO - XAUUSD | Bid: 4721.20 | Ask: 4721.51 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:18:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:19:37] INFO - XAUUSD | Bid: 4719.90 | Ask: 4720.20 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:19:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:20:37] INFO - XAUUSD | Bid: 4720.71 | Ask: 4721.02 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:20:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:21:37] INFO - XAUUSD | Bid: 4721.66 | Ask: 4721.96 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:21:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:22:37] INFO - XAUUSD | Bid: 4722.27 | Ask: 4722.58 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:22:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:23:37] INFO - XAUUSD | Bid: 4722.64 | Ask: 4722.95 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:23:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:24:37] INFO - XAUUSD | Bid: 4721.68 | Ask: 4721.99 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:24:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:25:37] INFO - XAUUSD | Bid: 4719.90 | Ask: 4720.18 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:25:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:26:37] INFO - XAUUSD | Bid: 4720.23 | Ask: 4720.54 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:26:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:27:37] INFO - XAUUSD | Bid: 4719.18 | Ask: 4719.49 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:27:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:28:37] INFO - XAUUSD | Bid: 4719.40 | Ask: 4719.71 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:28:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:29:37] INFO - XAUUSD | Bid: 4720.64 | Ask: 4720.95 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:29:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-13 12:30:37] INFO - XAUUSD | Bid: 4720.47 | Ask: 4720.75 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-13 12:30:37] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:29:08] INFO - ============================================================
+[2026-04-14 10:29:08] INFO - XAUUSD Trading Bot Starting...
+[2026-04-14 10:29:08] INFO - ============================================================
+[2026-04-14 10:29:13] INFO - Connected to MT5 | Account: 435387461 | Server: Exness-MT5Trial9 | Balance: 61351.53
+[2026-04-14 10:29:13] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-04-14 10:29:13] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-04-14 10:29:13] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-04-14 10:29:13] INFO - Checking every 60 seconds...
+[2026-04-14 10:29:13] INFO - ------------------------------------------------------------
+[2026-04-14 10:29:13] INFO - New day: 2026-04-14 | Starting balance: 61351.53
+[2026-04-14 10:29:13] INFO - XAUUSD | Bid: 4780.47 | Ask: 4780.86 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:29:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:30:13] INFO - XAUUSD | Bid: 4778.32 | Ask: 4778.72 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:30:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:31:13] INFO - XAUUSD | Bid: 4776.04 | Ask: 4776.44 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:31:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:32:13] INFO - XAUUSD | Bid: 4775.73 | Ask: 4776.04 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:32:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:33:13] INFO - XAUUSD | Bid: 4772.13 | Ask: 4772.53 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:33:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:34:13] INFO - XAUUSD | Bid: 4773.99 | Ask: 4774.35 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:34:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:35:13] INFO - XAUUSD | Bid: 4774.93 | Ask: 4775.32 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:35:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:36:13] INFO - XAUUSD | Bid: 4774.75 | Ask: 4775.06 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:36:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:37:13] INFO - XAUUSD | Bid: 4775.80 | Ask: 4776.11 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:37:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:38:13] INFO - XAUUSD | Bid: 4777.43 | Ask: 4777.82 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:38:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:39:13] INFO - XAUUSD | Bid: 4777.80 | Ask: 4778.19 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:39:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:40:13] INFO - XAUUSD | Bid: 4778.98 | Ask: 4779.37 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:40:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:41:13] INFO - XAUUSD | Bid: 4777.38 | Ask: 4777.78 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:41:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:42:13] INFO - XAUUSD | Bid: 4776.67 | Ask: 4777.07 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:42:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:43:13] INFO - XAUUSD | Bid: 4777.51 | Ask: 4777.82 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:43:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:44:13] INFO - XAUUSD | Bid: 4778.83 | Ask: 4779.11 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:44:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:45:13] INFO - XAUUSD | Bid: 4778.29 | Ask: 4778.60 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:45:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:46:13] INFO - XAUUSD | Bid: 4778.12 | Ask: 4778.43 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:46:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:47:13] INFO - XAUUSD | Bid: 4777.85 | Ask: 4778.15 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:47:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:48:13] INFO - XAUUSD | Bid: 4775.76 | Ask: 4776.07 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:48:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:49:13] INFO - XAUUSD | Bid: 4773.50 | Ask: 4773.81 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:49:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:50:13] INFO - XAUUSD | Bid: 4777.00 | Ask: 4777.31 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:50:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:51:13] INFO - XAUUSD | Bid: 4776.91 | Ask: 4777.22 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:51:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:52:13] INFO - XAUUSD | Bid: 4776.19 | Ask: 4776.49 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:52:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:53:13] INFO - XAUUSD | Bid: 4776.92 | Ask: 4777.22 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:53:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:54:13] INFO - XAUUSD | Bid: 4777.62 | Ask: 4778.02 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:54:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:55:13] INFO - XAUUSD | Bid: 4777.51 | Ask: 4777.82 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:55:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:56:13] INFO - XAUUSD | Bid: 4779.64 | Ask: 4779.92 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:56:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:57:13] INFO - XAUUSD | Bid: 4781.79 | Ask: 4782.10 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:57:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:58:13] INFO - XAUUSD | Bid: 4780.65 | Ask: 4780.93 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:58:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 10:59:13] INFO - XAUUSD | Bid: 4779.48 | Ask: 4779.78 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 10:59:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:00:13] INFO - XAUUSD | Bid: 4779.28 | Ask: 4779.59 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:00:13] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:01:13] INFO - XAUUSD | Bid: 4780.60 | Ask: 4780.91 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:01:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:02:14] INFO - XAUUSD | Bid: 4780.66 | Ask: 4781.02 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:02:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:03:14] INFO - XAUUSD | Bid: 4778.66 | Ask: 4779.02 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:03:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:04:14] INFO - XAUUSD | Bid: 4779.58 | Ask: 4779.89 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:04:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:05:14] INFO - XAUUSD | Bid: 4780.21 | Ask: 4780.52 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:05:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:06:14] INFO - XAUUSD | Bid: 4781.39 | Ask: 4781.69 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:06:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:07:14] INFO - XAUUSD | Bid: 4782.16 | Ask: 4782.47 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:07:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:08:14] INFO - XAUUSD | Bid: 4781.95 | Ask: 4782.26 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:08:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:09:14] INFO - XAUUSD | Bid: 4782.80 | Ask: 4783.11 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:09:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:10:14] INFO - XAUUSD | Bid: 4784.26 | Ask: 4784.56 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:10:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:11:14] INFO - XAUUSD | Bid: 4781.65 | Ask: 4782.05 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:11:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:12:14] INFO - XAUUSD | Bid: 4783.09 | Ask: 4783.40 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:12:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:13:14] INFO - XAUUSD | Bid: 4780.85 | Ask: 4781.24 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:13:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:14:14] INFO - XAUUSD | Bid: 4780.36 | Ask: 4780.67 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:14:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:15:14] INFO - XAUUSD | Bid: 4781.66 | Ask: 4781.97 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:15:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:16:14] INFO - XAUUSD | Bid: 4781.50 | Ask: 4781.81 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:16:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:17:14] INFO - XAUUSD | Bid: 4784.13 | Ask: 4784.52 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:17:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:18:14] INFO - XAUUSD | Bid: 4782.66 | Ask: 4782.97 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:18:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:19:14] INFO - XAUUSD | Bid: 4783.96 | Ask: 4784.35 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:19:14] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:20:14] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:20:14] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:20:14] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:21:14] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:21:14] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:21:14] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:22:14] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:22:14] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:22:14] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:23:14] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:23:14] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:23:14] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:23:47] INFO - Bot stopped by user (Ctrl+C).
+[2026-04-14 11:23:47] INFO - Disconnected from MT5.
+[2026-04-14 11:23:47] INFO - Bot shut down complete.
+[2026-04-14 11:24:03] INFO - ============================================================
+[2026-04-14 11:24:03] INFO - XAUUSD Trading Bot Starting...
+[2026-04-14 11:24:03] INFO - ============================================================
+[2026-04-14 11:24:19] INFO - Connected to MT5 | Account: 435387461 | Server: Exness-MT5Trial9 | Balance: 61351.53
+[2026-04-14 11:24:19] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-04-14 11:24:19] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-04-14 11:24:19] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-04-14 11:24:19] INFO - Checking every 60 seconds...
+[2026-04-14 11:24:19] INFO - ------------------------------------------------------------
+[2026-04-14 11:24:19] INFO - New day: 2026-04-14 | Starting balance: 61351.53
+[2026-04-14 11:24:19] INFO - XAUUSD | Bid: 4784.16 | Ask: 4784.47 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:24:19] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:25:19] INFO - XAUUSD | Bid: 4784.14 | Ask: 4784.45 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:25:19] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:26:19] INFO - XAUUSD | Bid: 4783.11 | Ask: 4783.42 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:26:19] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:27:19] INFO - XAUUSD | Bid: 4781.66 | Ask: 4781.97 | Balance: 61351.53 | Equity: 61351.53
+[2026-04-14 11:27:19] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:28:19] INFO - XAUUSD | Bid: 4782.49 | Ask: 4782.80 | Balance: 61351.53 | Equity: 61224.16
+[2026-04-14 11:28:19] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:29:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:29:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:29:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:30:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:30:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:30:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:31:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:31:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:31:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:32:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:32:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:32:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:33:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:33:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:33:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:34:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:34:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:34:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:35:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:35:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:35:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:36:19] ERROR - Failed to get account info. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:36:19] ERROR - Failed to get rates for XAUUSDm. Error: (-10001, 'IPC send failed')
+[2026-04-14 11:36:19] WARNING - Not enough data. Waiting for next cycle...
+[2026-04-14 11:36:56] INFO - Bot stopped by user (Ctrl+C).
+[2026-04-14 11:36:56] INFO - Disconnected from MT5.
+[2026-04-14 11:36:56] INFO - Bot shut down complete.
+[2026-04-14 11:37:06] INFO - ============================================================
+[2026-04-14 11:37:06] INFO - XAUUSD Trading Bot Starting...
+[2026-04-14 11:37:06] INFO - ============================================================
+[2026-04-14 11:37:06] INFO - Connected to MT5 | Account: 435387461 | Server: Exness-MT5Trial9 | Balance: 61351.53
+[2026-04-14 11:37:06] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-04-14 11:37:06] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-04-14 11:37:06] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-04-14 11:37:06] INFO - Checking every 60 seconds...
+[2026-04-14 11:37:06] INFO - ------------------------------------------------------------
+[2026-04-14 11:37:06] INFO - New day: 2026-04-14 | Starting balance: 61351.53
+[2026-04-14 11:37:06] INFO - XAUUSD | Bid: 4775.93 | Ask: 4776.33 | Balance: 61351.53 | Equity: 61903.72
+[2026-04-14 11:37:06] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:38:06] INFO - XAUUSD | Bid: 4772.24 | Ask: 4772.64 | Balance: 61351.53 | Equity: 62290.96
+[2026-04-14 11:38:06] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:39:06] INFO - XAUUSD | Bid: 4756.37 | Ask: 4756.73 | Balance: 62672.43 | Equity: 62672.43
+[2026-04-14 11:39:06] INFO - BUY signal (pullback) | RSI dipped to 36.63 in uptrend | ATR: 10.88
+[2026-04-14 11:39:06] INFO - Placing BUY order | Entry: 4756.73 | SL: 4740.40 | TP: 4789.38 | Volume: 0.38
+[2026-04-14 11:39:06] WARNING - BUY 0.38 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 11:39:16] INFO - BUY 0.38 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 11:39:16] INFO - Order placed | BUY 0.38 XAUUSDm @ 4756.73 | SL: 4740.4 | TP: 4789.38 | Ticket: 2632186221
+2026-04-14 11:39:16 | BUY   | XAUUSDm | Vol: 0.38 | Price: 4756.73 | SL: 4740.40 | TP: 4789.38 | Ticket: 2632186221
+[2026-04-14 11:39:16] INFO - Trade executed successfully! Ticket: 2632186221
+[2026-04-14 11:40:16] INFO - XAUUSD | Bid: 4762.77 | Ask: 4763.13 | Balance: 62672.43 | Equity: 62843.01
+[2026-04-14 11:40:16] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:41:16] INFO - XAUUSD | Bid: 4760.70 | Ask: 4761.25 | Balance: 62672.43 | Equity: 62764.35
+[2026-04-14 11:41:16] INFO - BUY signal (pullback) | RSI dipped to 38.92 in uptrend | ATR: 10.88
+[2026-04-14 11:41:16] INFO - Placing BUY order | Entry: 4761.25 | SL: 4744.93 | TP: 4793.91 | Volume: 0.38
+[2026-04-14 11:41:16] WARNING - BUY 0.38 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 11:41:16] INFO - BUY 0.38 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 11:41:16] INFO - Order placed | BUY 0.38 XAUUSDm @ 4761.254 | SL: 4744.93 | TP: 4793.91 | Ticket: 2632201860
+2026-04-14 11:41:16 | BUY   | XAUUSDm | Vol: 0.38 | Price: 4761.25 | SL: 4744.93 | TP: 4793.91 | Ticket: 2632201860
+[2026-04-14 11:41:16] INFO - Trade executed successfully! Ticket: 2632201860
+[2026-04-14 11:42:16] INFO - XAUUSD | Bid: 4759.73 | Ask: 4760.12 | Balance: 62672.43 | Equity: 62677.52
+[2026-04-14 11:42:17] INFO - BUY signal (pullback) | RSI dipped to 38.38 in uptrend | ATR: 10.88
+[2026-04-14 11:42:17] INFO - Placing BUY order | Entry: 4760.12 | SL: 4743.80 | TP: 4792.78 | Volume: 0.38
+[2026-04-14 11:42:17] WARNING - BUY 0.38 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 11:42:22] INFO - BUY 0.38 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 11:42:22] INFO - Order placed | BUY 0.38 XAUUSDm @ 4760.125 | SL: 4743.8 | TP: 4792.78 | Ticket: 2632207862
+2026-04-14 11:42:22 | BUY   | XAUUSDm | Vol: 0.38 | Price: 4760.12 | SL: 4743.80 | TP: 4792.78 | Ticket: 2632207862
+[2026-04-14 11:42:22] INFO - Trade executed successfully! Ticket: 2632207862
+[2026-04-14 11:43:22] INFO - XAUUSD | Bid: 4761.05 | Ask: 4761.44 | Balance: 62672.43 | Equity: 62812.50
+[2026-04-14 11:43:22] INFO - BUY signal (pullback) | RSI dipped to 39.11 in uptrend | ATR: 10.88
+[2026-04-14 11:43:22] INFO - Placing BUY order | Entry: 4761.44 | SL: 4745.11 | TP: 4794.09 | Volume: 0.38
+[2026-04-14 11:43:22] WARNING - BUY 0.38 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 11:43:24] INFO - BUY 0.38 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 11:43:24] INFO - Order placed | BUY 0.38 XAUUSDm @ 4761.441 | SL: 4745.11 | TP: 4794.09 | Ticket: 2632214319
+2026-04-14 11:43:24 | BUY   | XAUUSDm | Vol: 0.38 | Price: 4761.44 | SL: 4745.11 | TP: 4794.09 | Ticket: 2632214319
+[2026-04-14 11:43:24] INFO - Trade executed successfully! Ticket: 2632214319
+[2026-04-14 11:44:24] INFO - XAUUSD | Bid: 4766.98 | Ask: 4767.52 | Balance: 62672.43 | Equity: 63698.58
+[2026-04-14 11:44:24] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:45:24] INFO - XAUUSD | Bid: 4768.38 | Ask: 4768.78 | Balance: 62672.43 | Equity: 63912.14
+[2026-04-14 11:45:24] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:46:24] INFO - XAUUSD | Bid: 4769.19 | Ask: 4769.55 | Balance: 62672.43 | Equity: 64034.82
+[2026-04-14 11:46:24] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:47:24] INFO - XAUUSD | Bid: 4768.89 | Ask: 4769.20 | Balance: 62672.43 | Equity: 63989.50
+[2026-04-14 11:47:24] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:48:24] INFO - XAUUSD | Bid: 4768.97 | Ask: 4769.27 | Balance: 62672.43 | Equity: 64001.06
+[2026-04-14 11:48:24] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:49:24] INFO - XAUUSD | Bid: 4769.13 | Ask: 4769.44 | Balance: 62672.43 | Equity: 64026.30
+[2026-04-14 11:49:24] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:56:51] INFO - ============================================================
+[2026-04-14 11:56:51] INFO - XAUUSD Trading Bot Starting...
+[2026-04-14 11:56:51] INFO - ============================================================
+[2026-04-14 11:56:56] INFO - Connected to MT5 | Account: 435387461 | Server: Exness-MT5Trial9 | Balance: 62672.43
+[2026-04-14 11:56:56] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-04-14 11:56:56] INFO - Strategy: EMA(9/21) + RSI(14) + ATR(14)
+[2026-04-14 11:56:56] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-04-14 11:56:56] INFO - Checking every 60 seconds...
+[2026-04-14 11:56:56] INFO - ------------------------------------------------------------
+[2026-04-14 11:56:56] INFO - Tracking 4 existing open position(s).
+[2026-04-14 11:56:56] INFO - New day: 2026-04-14 | Starting balance: 62672.43
+[2026-04-14 11:56:56] INFO - XAUUSD | Bid: 4776.57 | Ask: 4776.97 | Balance: 62672.43 | Equity: 64325.58
+[2026-04-14 11:56:56] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:57:56] INFO - XAUUSD | Bid: 4769.30 | Ask: 4769.60 | Balance: 62672.43 | Equity: 64051.54
+[2026-04-14 11:57:56] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:58:56] INFO - XAUUSD | Bid: 4770.21 | Ask: 4770.49 | Balance: 62672.43 | Equity: 64190.14
+[2026-04-14 11:58:56] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 11:59:56] INFO - XAUUSD | Bid: 4769.09 | Ask: 4769.40 | Balance: 62672.43 | Equity: 64020.38
+[2026-04-14 11:59:56] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:00:56] INFO - XAUUSD | Bid: 4768.18 | Ask: 4768.49 | Balance: 62672.43 | Equity: 63881.74
+[2026-04-14 12:00:56] INFO - SELL signal | EMA Fast: 4774.75 < EMA Slow: 4775.45 | RSI: 43.96 | ATR: 9.23
+[2026-04-14 12:00:56] INFO - Placing SELL order | Entry: 4768.18 | SL: 4782.03 | TP: 4740.48 | Volume: 0.45
+[2026-04-14 12:00:56] WARNING - SELL 0.45 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 12:00:56] INFO - SELL 0.45 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 12:00:56] INFO - Order placed | SELL 0.45 XAUUSDm @ 4768.18 | SL: 4782.03 | TP: 4740.48 | Ticket: 2632292431
+2026-04-14 12:00:56 | SELL  | XAUUSDm | Vol: 0.45 | Price: 4768.18 | SL: 4782.03 | TP: 4740.48 | Ticket: 2632292431
+[2026-04-14 12:00:56] INFO - Trade executed successfully! Ticket: 2632292431
+[2026-04-14 12:01:56] INFO - XAUUSD | Bid: 4770.32 | Ask: 4770.63 | Balance: 62672.43 | Equity: 64100.06
+[2026-04-14 12:01:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:02:56] INFO - XAUUSD | Bid: 4770.43 | Ask: 4770.70 | Balance: 62672.43 | Equity: 64112.55
+[2026-04-14 12:02:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:03:56] INFO - XAUUSD | Bid: 4770.24 | Ask: 4770.55 | Balance: 62672.43 | Equity: 64091.73
+[2026-04-14 12:03:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:04:56] INFO - XAUUSD | Bid: 4769.92 | Ask: 4770.22 | Balance: 62672.43 | Equity: 64056.84
+[2026-04-14 12:04:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:05:56] INFO - XAUUSD | Bid: 4772.42 | Ask: 4772.73 | Balance: 62672.43 | Equity: 64325.18
+[2026-04-14 12:05:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:06:56] INFO - XAUUSD | Bid: 4772.75 | Ask: 4773.03 | Balance: 62672.43 | Equity: 64360.91
+[2026-04-14 12:06:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:07:56] INFO - XAUUSD | Bid: 4772.01 | Ask: 4772.31 | Balance: 62672.43 | Equity: 64280.47
+[2026-04-14 12:07:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:08:56] INFO - XAUUSD | Bid: 4774.94 | Ask: 4775.25 | Balance: 62672.43 | Equity: 64594.70
+[2026-04-14 12:08:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:09:56] INFO - XAUUSD | Bid: 4776.11 | Ask: 4776.42 | Balance: 62672.43 | Equity: 64719.36
+[2026-04-14 12:09:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:10:56] INFO - XAUUSD | Bid: 4776.78 | Ask: 4777.09 | Balance: 62672.43 | Equity: 64791.70
+[2026-04-14 12:10:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:11:56] INFO - XAUUSD | Bid: 4775.57 | Ask: 4775.88 | Balance: 62672.43 | Equity: 64662.11
+[2026-04-14 12:11:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:12:56] INFO - XAUUSD | Bid: 4775.66 | Ask: 4775.97 | Balance: 62672.43 | Equity: 64671.55
+[2026-04-14 12:12:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:13:56] INFO - XAUUSD | Bid: 4775.66 | Ask: 4775.97 | Balance: 62672.43 | Equity: 64671.55
+[2026-04-14 12:13:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:14:56] INFO - XAUUSD | Bid: 4775.96 | Ask: 4776.27 | Balance: 62672.43 | Equity: 64703.65
+[2026-04-14 12:14:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:15:56] INFO - XAUUSD | Bid: 4776.88 | Ask: 4777.16 | Balance: 62672.43 | Equity: 64803.54
+[2026-04-14 12:15:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:16:56] INFO - XAUUSD | Bid: 4777.34 | Ask: 4777.62 | Balance: 62672.43 | Equity: 64852.69
+[2026-04-14 12:16:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:17:56] INFO - XAUUSD | Bid: 4777.27 | Ask: 4777.58 | Balance: 62672.43 | Equity: 64843.59
+[2026-04-14 12:17:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:18:56] INFO - XAUUSD | Bid: 4776.99 | Ask: 4777.30 | Balance: 62672.43 | Equity: 64813.63
+[2026-04-14 12:18:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:19:56] INFO - XAUUSD | Bid: 4777.14 | Ask: 4777.45 | Balance: 62672.43 | Equity: 64830.22
+[2026-04-14 12:19:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:20:56] INFO - XAUUSD | Bid: 4777.37 | Ask: 4777.68 | Balance: 62672.43 | Equity: 64854.83
+[2026-04-14 12:20:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:21:56] INFO - XAUUSD | Bid: 4776.61 | Ask: 4777.01 | Balance: 62672.43 | Equity: 64769.13
+[2026-04-14 12:21:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:22:56] INFO - XAUUSD | Bid: 4777.48 | Ask: 4777.76 | Balance: 62672.43 | Equity: 64867.44
+[2026-04-14 12:22:56] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:23:57] INFO - XAUUSD | Bid: 4776.58 | Ask: 4776.89 | Balance: 62672.43 | Equity: 64769.57
+[2026-04-14 12:23:57] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:24:57] INFO - XAUUSD | Bid: 4778.21 | Ask: 4778.49 | Balance: 62672.43 | Equity: 64945.32
+[2026-04-14 12:24:57] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:25:57] INFO - XAUUSD | Bid: 4779.08 | Ask: 4779.39 | Balance: 62672.43 | Equity: 65037.61
+[2026-04-14 12:25:57] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:26:57] INFO - XAUUSD | Bid: 4778.70 | Ask: 4779.01 | Balance: 62672.43 | Equity: 64996.49
+[2026-04-14 12:26:57] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 12:27:57] INFO - Trade closed | Ticket: 2632186221 | BUY | Reason: Closed Manually | Close Price: 4780.67
+[2026-04-14 12:27:57] INFO - Trade closed | Ticket: 2632201860 | BUY | Reason: Closed Manually | Close Price: 4780.67
+[2026-04-14 12:27:57] INFO - Trade closed | Ticket: 2632207862 | BUY | Reason: Closed Manually | Close Price: 4780.67
+[2026-04-14 12:27:57] INFO - Trade closed | Ticket: 2632214319 | BUY | Reason: Closed Manually | Close Price: 4780.67
+[2026-04-14 12:27:57] INFO - Trade closed | Ticket: 2632292431 | SELL | Reason: Closed Manually | Close Price: 4780.98
+[2026-04-14 12:27:57] INFO - XAUUSD | Bid: 4780.67 | Ask: 4780.98 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:27:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:28:57] INFO - XAUUSD | Bid: 4782.16 | Ask: 4782.47 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:28:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:29:57] INFO - XAUUSD | Bid: 4778.03 | Ask: 4778.39 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:29:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:30:57] INFO - XAUUSD | Bid: 4776.94 | Ask: 4777.25 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:30:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:31:57] INFO - XAUUSD | Bid: 4775.67 | Ask: 4776.06 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:31:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:32:57] INFO - XAUUSD | Bid: 4775.04 | Ask: 4775.35 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:32:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:33:57] INFO - XAUUSD | Bid: 4775.31 | Ask: 4775.62 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:33:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:34:57] INFO - XAUUSD | Bid: 4773.62 | Ask: 4773.93 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:34:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:35:57] INFO - XAUUSD | Bid: 4774.15 | Ask: 4774.43 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:35:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:36:57] INFO - XAUUSD | Bid: 4773.53 | Ask: 4773.84 | Balance: 65137.26 | Equity: 65137.26
+[2026-04-14 12:36:57] INFO - SELL signal | EMA Fast: 4776.13 < EMA Slow: 4776.13 | RSI: 48.59 | ATR: 9.65
+[2026-04-14 12:36:57] INFO - Placing SELL order | Entry: 4773.53 | SL: 4788.00 | TP: 4744.59 | Volume: 0.45
+[2026-04-14 12:36:57] WARNING - SELL 0.45 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 12:36:57] INFO - SELL 0.45 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 12:36:57] INFO - Order placed | SELL 0.45 XAUUSDm @ 4773.528 | SL: 4788.0 | TP: 4744.59 | Ticket: 2632451701
+2026-04-14 12:36:57 | SELL  | XAUUSDm | Vol: 0.45 | Price: 4773.53 | SL: 4788.00 | TP: 4744.59 | Ticket: 2632451701
+[2026-04-14 12:36:57] INFO - Trade executed successfully! Ticket: 2632451701
+[2026-04-14 12:37:57] INFO - XAUUSD | Bid: 4774.94 | Ask: 4775.25 | Balance: 65137.26 | Equity: 65059.90
+[2026-04-14 12:37:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:38:57] INFO - XAUUSD | Bid: 4777.03 | Ask: 4777.34 | Balance: 65137.26 | Equity: 64965.81
+[2026-04-14 12:38:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:39:57] INFO - XAUUSD | Bid: 4777.75 | Ask: 4778.03 | Balance: 65137.26 | Equity: 64934.80
+[2026-04-14 12:39:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:40:57] INFO - XAUUSD | Bid: 4778.53 | Ask: 4778.81 | Balance: 65137.26 | Equity: 64899.75
+[2026-04-14 12:40:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:41:57] INFO - XAUUSD | Bid: 4778.05 | Ask: 4778.35 | Balance: 65137.26 | Equity: 64920.04
+[2026-04-14 12:41:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:42:57] INFO - XAUUSD | Bid: 4779.06 | Ask: 4779.37 | Balance: 65137.26 | Equity: 64874.50
+[2026-04-14 12:42:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:43:57] INFO - XAUUSD | Bid: 4778.08 | Ask: 4778.39 | Balance: 65137.26 | Equity: 64918.65
+[2026-04-14 12:43:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:44:57] INFO - XAUUSD | Bid: 4777.83 | Ask: 4778.14 | Balance: 65137.26 | Equity: 64929.76
+[2026-04-14 12:44:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:45:57] INFO - XAUUSD | Bid: 4778.36 | Ask: 4778.67 | Balance: 65137.26 | Equity: 64905.96
+[2026-04-14 12:45:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:46:57] INFO - XAUUSD | Bid: 4778.72 | Ask: 4779.00 | Balance: 65137.26 | Equity: 64890.93
+[2026-04-14 12:46:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:47:57] INFO - XAUUSD | Bid: 4777.36 | Ask: 4777.67 | Balance: 65137.26 | Equity: 64950.73
+[2026-04-14 12:47:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:48:57] INFO - XAUUSD | Bid: 4776.54 | Ask: 4776.85 | Balance: 65137.26 | Equity: 64987.95
+[2026-04-14 12:48:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:49:57] INFO - XAUUSD | Bid: 4775.29 | Ask: 4775.57 | Balance: 65137.26 | Equity: 65045.23
+[2026-04-14 12:49:57] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:50:57] INFO - XAUUSD | Bid: 4773.15 | Ask: 4773.46 | Balance: 65137.26 | Equity: 65140.32
+[2026-04-14 12:50:58] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:51:58] INFO - XAUUSD | Bid: 4773.62 | Ask: 4773.93 | Balance: 65137.26 | Equity: 65119.03
+[2026-04-14 12:51:58] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:52:58] INFO - XAUUSD | Bid: 4772.38 | Ask: 4772.69 | Balance: 65137.26 | Equity: 65175.06
+[2026-04-14 12:52:58] INFO - SELL signal | EMA Fast: 4776.10 < EMA Slow: 4776.16 | RSI: 47.36 | ATR: 9.58
+[2026-04-14 12:52:58] INFO - Placing SELL order | Entry: 4772.38 | SL: 4786.75 | TP: 4743.65 | Volume: 0.45
+[2026-04-14 12:52:58] WARNING - SELL 0.45 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 12:52:58] INFO - SELL 0.45 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 12:52:58] INFO - Order placed | SELL 0.45 XAUUSDm @ 4772.38 | SL: 4786.75 | TP: 4743.65 | Ticket: 2632515889
+2026-04-14 12:52:58 | SELL  | XAUUSDm | Vol: 0.45 | Price: 4772.38 | SL: 4786.75 | TP: 4743.65 | Ticket: 2632515889
+[2026-04-14 12:52:58] INFO - Trade executed successfully! Ticket: 2632515889
+[2026-04-14 12:53:58] INFO - XAUUSD | Bid: 4773.10 | Ask: 4773.38 | Balance: 65137.26 | Equity: 65098.74
+[2026-04-14 12:53:58] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:54:58] INFO - XAUUSD | Bid: 4774.12 | Ask: 4774.40 | Balance: 65137.26 | Equity: 65007.02
+[2026-04-14 12:54:58] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:55:58] INFO - XAUUSD | Bid: 4772.05 | Ask: 4772.36 | Balance: 65137.26 | Equity: 65190.72
+[2026-04-14 12:55:58] INFO - SELL signal | EMA Fast: 4776.03 < EMA Slow: 4776.13 | RSI: 47.09 | ATR: 9.58
+[2026-04-14 12:55:58] INFO - Placing SELL order | Entry: 4772.05 | SL: 4786.42 | TP: 4743.32 | Volume: 0.45
+[2026-04-14 12:55:58] WARNING - SELL 0.45 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 12:55:58] INFO - SELL 0.45 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 12:55:58] INFO - Order placed | SELL 0.45 XAUUSDm @ 4772.052 | SL: 4786.42 | TP: 4743.32 | Ticket: 2632526947
+2026-04-14 12:55:58 | SELL  | XAUUSDm | Vol: 0.45 | Price: 4772.05 | SL: 4786.42 | TP: 4743.32 | Ticket: 2632526947
+[2026-04-14 12:55:58] INFO - Trade executed successfully! Ticket: 2632526947
+[2026-04-14 12:56:58] INFO - XAUUSD | Bid: 4772.41 | Ask: 4772.72 | Balance: 65137.26 | Equity: 65128.92
+[2026-04-14 12:56:58] INFO - SELL signal | EMA Fast: 4776.10 < EMA Slow: 4776.16 | RSI: 47.38 | ATR: 9.58
+[2026-04-14 12:56:58] INFO - Placing SELL order | Entry: 4772.41 | SL: 4786.77 | TP: 4743.67 | Volume: 0.45
+[2026-04-14 12:56:58] WARNING - SELL 0.45 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 12:56:59] INFO - SELL 0.45 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 12:56:59] INFO - Order placed | SELL 0.45 XAUUSDm @ 4772.407 | SL: 4786.77 | TP: 4743.67 | Ticket: 2632529743
+2026-04-14 12:56:59 | SELL  | XAUUSDm | Vol: 0.45 | Price: 4772.41 | SL: 4786.77 | TP: 4743.67 | Ticket: 2632529743
+[2026-04-14 12:56:59] INFO - Trade executed successfully! Ticket: 2632529743
+[2026-04-14 12:57:59] INFO - XAUUSD | Bid: 4773.73 | Ask: 4774.10 | Balance: 65137.26 | Equity: 64866.66
+[2026-04-14 12:57:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:58:59] INFO - XAUUSD | Bid: 4781.81 | Ask: 4782.12 | Balance: 65137.26 | Equity: 63422.54
+[2026-04-14 12:58:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 12:59:59] INFO - XAUUSD | Bid: 4775.05 | Ask: 4775.36 | Balance: 65137.26 | Equity: 64638.62
+[2026-04-14 12:59:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 13:00:59] INFO - XAUUSD | Bid: 4776.35 | Ask: 4776.63 | Balance: 65137.26 | Equity: 64410.90
+[2026-04-14 13:00:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 13:01:59] INFO - XAUUSD | Bid: 4775.73 | Ask: 4776.04 | Balance: 65137.26 | Equity: 64516.22
+[2026-04-14 13:01:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 13:02:59] INFO - XAUUSD | Bid: 4776.26 | Ask: 4776.56 | Balance: 65137.26 | Equity: 64422.06
+[2026-04-14 13:02:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 13:03:59] INFO - XAUUSD | Bid: 4776.04 | Ask: 4776.35 | Balance: 65137.26 | Equity: 64461.30
+[2026-04-14 13:03:59] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-14 13:04:59] INFO - XAUUSD | Bid: 4774.60 | Ask: 4774.96 | Balance: 65137.26 | Equity: 64710.98
+[2026-04-14 13:04:59] INFO - SELL signal | EMA Fast: 4776.22 < EMA Slow: 4776.24 | RSI: 49.22 | ATR: 9.61
+[2026-04-14 13:04:59] INFO - Placing SELL order | Entry: 4774.60 | SL: 4789.01 | TP: 4745.78 | Volume: 0.45
+[2026-04-14 13:04:59] WARNING - SELL 0.45 XAUUSDm | Filling RETURN not supported (10030), trying next...
+[2026-04-14 13:05:06] INFO - SELL 0.45 XAUUSDm succeeded with filling mode: IOC
+[2026-04-14 13:05:06] INFO - Order placed | SELL 0.45 XAUUSDm @ 4774.6 | SL: 4789.01 | TP: 4745.78 | Ticket: 2632578823
+2026-04-14 13:05:06 | SELL  | XAUUSDm | Vol: 0.45 | Price: 4774.60 | SL: 4789.01 | TP: 4745.78 | Ticket: 2632578823
+[2026-04-14 13:05:06] INFO - Trade executed successfully! Ticket: 2632578823
+[2026-04-14 13:06:06] INFO - XAUUSD | Bid: 4776.30 | Ask: 4776.60 | Balance: 65137.26 | Equity: 64334.80
+[2026-04-14 13:06:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:07:06] INFO - XAUUSD | Bid: 4776.00 | Ask: 4776.31 | Balance: 65137.26 | Equity: 64402.10
+[2026-04-14 13:07:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:08:06] INFO - XAUUSD | Bid: 4776.91 | Ask: 4777.22 | Balance: 65137.26 | Equity: 64196.90
+[2026-04-14 13:08:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:09:06] INFO - XAUUSD | Bid: 4776.77 | Ask: 4777.05 | Balance: 65137.26 | Equity: 64234.45
+[2026-04-14 13:09:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:10:06] INFO - XAUUSD | Bid: 4774.39 | Ask: 4774.75 | Balance: 65137.26 | Equity: 64752.85
+[2026-04-14 13:10:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:11:06] INFO - XAUUSD | Bid: 4773.12 | Ask: 4773.52 | Balance: 65137.26 | Equity: 65029.40
+[2026-04-14 13:11:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:12:06] INFO - XAUUSD | Bid: 4771.61 | Ask: 4771.97 | Balance: 65137.26 | Equity: 65377.90
+[2026-04-14 13:12:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:13:06] INFO - XAUUSD | Bid: 4770.98 | Ask: 4771.29 | Balance: 65137.26 | Equity: 65530.70
+[2026-04-14 13:13:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:14:06] INFO - XAUUSD | Bid: 4769.93 | Ask: 4770.24 | Balance: 65137.26 | Equity: 65767.85
+[2026-04-14 13:14:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:15:06] INFO - XAUUSD | Bid: 4770.06 | Ask: 4770.46 | Balance: 65137.26 | Equity: 65717.20
+[2026-04-14 13:15:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:16:06] INFO - XAUUSD | Bid: 4767.38 | Ask: 4767.69 | Balance: 65137.26 | Equity: 66341.80
+[2026-04-14 13:16:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:17:06] INFO - XAUUSD | Bid: 4768.44 | Ask: 4768.75 | Balance: 65137.26 | Equity: 66101.50
+[2026-04-14 13:17:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:18:06] INFO - XAUUSD | Bid: 4771.92 | Ask: 4772.20 | Balance: 65137.26 | Equity: 65325.70
+[2026-04-14 13:18:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:19:06] INFO - XAUUSD | Bid: 4770.88 | Ask: 4771.19 | Balance: 65137.26 | Equity: 65553.65
+[2026-04-14 13:19:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:20:06] INFO - XAUUSD | Bid: 4769.40 | Ask: 4769.71 | Balance: 65137.26 | Equity: 65887.10
+[2026-04-14 13:20:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:21:06] INFO - XAUUSD | Bid: 4765.34 | Ask: 4765.65 | Balance: 65137.26 | Equity: 66800.15
+[2026-04-14 13:21:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:22:06] INFO - XAUUSD | Bid: 4764.91 | Ask: 4765.22 | Balance: 65137.26 | Equity: 66895.75
+[2026-04-14 13:22:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:23:06] INFO - XAUUSD | Bid: 4764.25 | Ask: 4764.53 | Balance: 65137.26 | Equity: 67052.35
+[2026-04-14 13:23:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:24:06] INFO - XAUUSD | Bid: 4765.46 | Ask: 4765.74 | Balance: 65137.26 | Equity: 66778.55
+[2026-04-14 13:24:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:25:06] INFO - XAUUSD | Bid: 4765.85 | Ask: 4766.15 | Balance: 65137.26 | Equity: 66686.30
+[2026-04-14 13:25:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:26:06] INFO - XAUUSD | Bid: 4766.43 | Ask: 4766.71 | Balance: 65137.26 | Equity: 66561.85
+[2026-04-14 13:26:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:27:06] INFO - XAUUSD | Bid: 4768.99 | Ask: 4769.27 | Balance: 65137.26 | Equity: 65984.05
+[2026-04-14 13:27:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:28:06] INFO - XAUUSD | Bid: 4769.33 | Ask: 4769.64 | Balance: 65137.26 | Equity: 65901.95
+[2026-04-14 13:28:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:29:06] INFO - XAUUSD | Bid: 4767.66 | Ask: 4767.94 | Balance: 65137.26 | Equity: 66284.90
+[2026-04-14 13:29:06] INFO - Max open trades reached (5/5). Waiting...
+[2026-04-14 13:29:14] INFO - Bot stopped by user (Ctrl+C).
+[2026-04-14 13:29:14] INFO - Disconnected from MT5.
+[2026-04-14 13:29:14] INFO - Bot shut down complete.

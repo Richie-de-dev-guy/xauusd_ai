@@ -4,18 +4,18 @@
 
 # --- MT5 Account Details (Exness) ---
 # Replace these with your actual Exness MT5 credentials
-MT5_LOGIN = 000000000            # Your MT5 account number
-MT5_PASSWORD = "your_password"  # Your MT5 account password
-MT5_SERVER = "Your Exness server name (check your Exness Personal Area)"   # Your Exness server name (check your Exness Personal Area)
-MT5_PATH = r"Path to your MT5 terminal"  # Path to your MT5 terminal
+MT5_LOGIN = 435387461            # Your MT5 account number
+MT5_PASSWORD = "Effiom3009$1"  # Your MT5 account password
+MT5_SERVER = "Exness-MT5Trial9"   # Your Exness server name (check your Exness Personal Area)
+MT5_PATH = r"C:\Program Files\MetaTrader 5\terminal64.exe"  # Path to your MT5 terminal
 
-# --- Telegram Configuration ---
-TELEGRAM_ENABLED = True
-TELEGRAM_BOT_TOKEN = "your_token_here"
-TELEGRAM_CHAT_ID = "your_id_here"
+# # --- Telegram Configuration ---
+# TELEGRAM_ENABLED = True
+# TELEGRAM_BOT_TOKEN = "your_token_here"
+# TELEGRAM_CHAT_ID = "your_id_here"
 
-# --- Trading Parameters ---
-SYMBOL = "XAUUSD"
+# --- Trading Parameters --- main_bot
+SYMBOL = "XAUUSDm"
 TIMEFRAME = "M15"       # Options: M1, M5, M15, M30, H1, H4, D1
 MAGIC_NUMBER = 234000   # Unique ID for this bot's trades
 
