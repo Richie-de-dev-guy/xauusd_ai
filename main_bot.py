@@ -209,19 +209,27 @@ def main():
                     time.sleep(config.CHECK_INTERVAL_SECONDS)
                     continue
 
+                # Skip if a position in the same direction is already open
+                same_dir = [p for p in open_positions if p["type"] == signal]
+                if same_dir:
+                    logger.info(f"Skipping {signal} — {len(same_dir)} open {signal} position(s) already exist.")
+                    time.sleep(config.CHECK_INTERVAL_SECONDS)
+                    continue
+
                 if atr <= 0:
                     logger.warning("ATR is zero or negative. Skipping.")
                     time.sleep(config.CHECK_INTERVAL_SECONDS)
                     continue
 
-                # Determine entry price
+                # Determine entry price and spread
+                spread = ask - bid
                 if signal == "BUY":
                     entry_price = ask
                 else:
                     entry_price = bid
 
-                # Calculate SL and TP
-                sl, tp = strategy.calculate_sl_tp(signal, entry_price, atr, config.TAKE_PROFIT_RR)
+                # Calculate SL and TP (spread widens effective SL distance)
+                sl, tp = strategy.calculate_sl_tp(signal, entry_price, atr, config.TAKE_PROFIT_RR, spread)
 
                 # Calculate position size
                 sl_distance = abs(entry_price - sl)
