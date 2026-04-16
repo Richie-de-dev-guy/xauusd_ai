@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from datetime import datetime, timezone
 from logger import setup_logger
 
 logger = setup_logger()
@@ -31,6 +32,12 @@ class TradingStrategy:
         self.rsi_oversold = rsi_oversold
         self.atr_period = atr_period
         self.last_signal = "HOLD"
+
+    def is_tradeable_session(self):
+        """Return True during London and New York sessions (07:00–22:00 UTC).
+        Skips the Asian low-liquidity window where EMA crossovers on Gold produce more noise."""
+        hour = datetime.now(timezone.utc).hour
+        return 7 <= hour < 22
 
     def calculate_ema(self, series, period):
         """Calculate Exponential Moving Average."""
@@ -64,7 +71,8 @@ class TradingStrategy:
         tr3 = abs(low - close.shift(1))
 
         true_range = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
-        atr = true_range.rolling(window=period, min_periods=period).mean()
+        # Wilder's smoothing: alpha = 1/period (equivalent to com = period - 1)
+        atr = true_range.ewm(com=period - 1, min_periods=period, adjust=False).mean()
         return atr
 
     def add_indicators(self, df):
@@ -86,6 +94,10 @@ class TradingStrategy:
         Analyze the latest data and return a trading signal.
         Returns: "BUY", "SELL", or "HOLD"
         """
+        if not self.is_tradeable_session():
+            logger.info("Outside trading session (07:00–22:00 UTC). Signal: HOLD.")
+            return "HOLD", 0.0
+
         df = self.add_indicators(df)
 
         if len(df) < self.slow_ema + 5:
@@ -114,29 +126,30 @@ class TradingStrategy:
             signal = "SELL"
             logger.info(f"SELL signal | EMA Fast: {ema_fast:.2f} < EMA Slow: {ema_slow:.2f} | RSI: {rsi:.2f} | ATR: {atr:.2f}")
 
-        # Additional: Strong trend continuation
+        # Additional: Strong trend continuation (pullback entry)
+        # Guard with last_signal to prevent firing every tick while conditions persist
         elif ema_fast > ema_slow and prev["ema_fast"] > prev["ema_slow"]:
             # Already in uptrend — check for pullback entry
-            if rsi < 40 and rsi > self.rsi_oversold:
+            if rsi < 40 and rsi > self.rsi_oversold and self.last_signal != "BUY":
                 signal = "BUY"
                 logger.info(f"BUY signal (pullback) | RSI dipped to {rsi:.2f} in uptrend | ATR: {atr:.2f}")
 
         elif ema_fast < ema_slow and prev["ema_fast"] < prev["ema_slow"]:
             # Already in downtrend — check for pullback entry
-            if rsi > 60 and rsi < self.rsi_overbought:
+            if rsi > 60 and rsi < self.rsi_overbought and self.last_signal != "SELL":
                 signal = "SELL"
                 logger.info(f"SELL signal (pullback) | RSI rose to {rsi:.2f} in downtrend | ATR: {atr:.2f}")
 
         self.last_signal = signal
         return signal, atr
 
-    def calculate_sl_tp(self, order_type, entry_price, atr, rr_ratio):
+    def calculate_sl_tp(self, order_type, entry_price, atr, rr_ratio, spread=0.0):
         """
         Calculate Stop Loss and Take Profit based on ATR.
-        SL = 1.5 x ATR from entry
+        SL = 1.5 x ATR from entry (plus spread, which works against the position)
         TP = RR ratio x SL distance from entry
         """
-        sl_distance = 1.5 * atr
+        sl_distance = 1.5 * atr + spread  # spread widens the effective loss distance
 
         if order_type == "BUY":
             sl = round(entry_price - sl_distance, 2)
