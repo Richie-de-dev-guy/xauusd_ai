@@ -15,6 +15,7 @@ from datetime import datetime, date
 import config
 from mt5_connector import MT5Connector
 from strategy import TradingStrategy
+from news_filter import NewsFilter
 from logger import setup_logger, log_trade
 
 logger = setup_logger(config.LOG_FILE)
@@ -99,6 +100,9 @@ def main():
         logger.error("Failed to connect to MT5. Exiting.")
         sys.exit(1)
 
+    # Initialize news filter
+    news_filter = NewsFilter(window_minutes=config.NEWS_FILTER_WINDOW_MINUTES) if config.NEWS_FILTER_ENABLED else None
+
     # Initialize strategy
     strategy = TradingStrategy(
         fast_ema=config.FAST_EMA_PERIOD,
@@ -173,12 +177,14 @@ def main():
                 # ---- CHECK FOR CLOSED POSITIONS (TP, SL, MANUAL) ----
                 tracked_tickets = check_closed_positions(connector, tracked_tickets)
 
-                # Get historical data
-                df = connector.get_rates(config.SYMBOL, config.TIMEFRAME, num_bars=100)
+                # Get historical data (entry timeframe + H4 for trend filter)
+                df = connector.get_rates(config.SYMBOL, config.TIMEFRAME, num_bars=config.NUM_BARS)
                 if df is None or len(df) < 60:
                     logger.warning("Not enough data. Waiting for next cycle...")
                     time.sleep(config.CHECK_INTERVAL_SECONDS)
                     continue
+
+                df_h4 = connector.get_rates(config.SYMBOL, config.HTF_TIMEFRAME, num_bars=config.H4_BARS)
 
                 # Get current price
                 bid, ask = connector.get_current_price(config.SYMBOL)
@@ -201,8 +207,16 @@ def main():
                     time.sleep(config.CHECK_INTERVAL_SECONDS)
                     continue
 
-                # Get trading signal
-                signal, atr = strategy.get_signal(df)
+                # Check news blackout window before generating any signal
+                if news_filter and news_filter.is_blocked():
+                    logger.info("News filter active — skipping this cycle.")
+                    time.sleep(config.CHECK_INTERVAL_SECONDS)
+                    continue
+
+                # Get H4 trend bias, then generate entry-timeframe signal
+                htf_bias = strategy.check_htf_trend(df_h4)
+                logger.info(f"H4 trend bias: {htf_bias}")
+                signal, atr = strategy.get_signal(df, htf_bias=htf_bias)
 
                 if signal == "HOLD":
                     logger.info("Signal: HOLD — No trade opportunity.")
