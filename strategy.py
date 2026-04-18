@@ -89,10 +89,44 @@ class TradingStrategy:
 
         return df
 
-    def get_signal(self, df):
+    def check_htf_trend(self, df_h4):
+        """
+        Determine the H4 trend direction using the same EMA pair.
+
+        Returns "BULLISH", "BEARISH", or "NEUTRAL".
+        - BULLISH : fast EMA > slow EMA on H4 — only BUY signals pass the filter.
+        - BEARISH : fast EMA < slow EMA on H4 — only SELL signals pass the filter.
+        - NEUTRAL : not enough data; filter is bypassed (no signals blocked).
+        """
+        if df_h4 is None or len(df_h4) < self.slow_ema + 5:
+            logger.warning("H4 trend filter: not enough H4 bars — filter bypassed.")
+            return "NEUTRAL"
+
+        df = df_h4.copy()
+        df["ema_fast"] = self.calculate_ema(df["close"], self.fast_ema)
+        df["ema_slow"] = self.calculate_ema(df["close"], self.slow_ema)
+
+        latest_fast = df["ema_fast"].iloc[-1]
+        latest_slow = df["ema_slow"].iloc[-1]
+
+        if latest_fast > latest_slow:
+            return "BULLISH"
+        elif latest_fast < latest_slow:
+            return "BEARISH"
+        return "NEUTRAL"
+
+    def get_signal(self, df, htf_bias="NEUTRAL"):
         """
         Analyze the latest data and return a trading signal.
-        Returns: "BUY", "SELL", or "HOLD"
+
+        Parameters
+        ----------
+        df        : DataFrame of M15 (or H1) OHLCV bars
+        htf_bias  : "BULLISH", "BEARISH", or "NEUTRAL" from check_htf_trend().
+                    When BULLISH, SELL signals are suppressed.
+                    When BEARISH, BUY signals are suppressed.
+
+        Returns: ("BUY" | "SELL" | "HOLD", atr_value)
         """
         if not self.is_tradeable_session():
             logger.info("Outside trading session (07:00–22:00 UTC). Signal: HOLD.")
@@ -139,6 +173,14 @@ class TradingStrategy:
             if rsi > 60 and rsi < self.rsi_overbought and self.last_signal != "SELL":
                 signal = "SELL"
                 logger.info(f"SELL signal (pullback) | RSI rose to {rsi:.2f} in downtrend | ATR: {atr:.2f}")
+
+        # Apply higher-timeframe trend filter
+        if htf_bias == "BULLISH" and signal == "SELL":
+            logger.info("SELL signal suppressed — H4 trend is BULLISH (counter-trend trade blocked).")
+            signal = "HOLD"
+        elif htf_bias == "BEARISH" and signal == "BUY":
+            logger.info("BUY signal suppressed — H4 trend is BEARISH (counter-trend trade blocked).")
+            signal = "HOLD"
 
         self.last_signal = signal
         return signal, atr
