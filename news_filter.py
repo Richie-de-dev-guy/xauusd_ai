@@ -127,8 +127,23 @@ class NewsFilter:
         Return a string describing the next upcoming high-impact event,
         or None if none are found. Useful for dashboard display.
         """
+        data = self.next_event_data()
+        if not data:
+            return None
+        delta_min = (data["countdown_seconds"] or 0) // 60
+        return f"{data['title']} at {data['scheduled_utc'].strftime('%H:%M UTC')} (in {delta_min} min)"
+
+    def next_event_data(self):
+        """
+        Return structured data about the next upcoming high-impact event as a dict,
+        or None if there are no upcoming events this week.
+
+        Keys: title, scheduled_utc, countdown_seconds, impact, currency,
+              is_blackout_active, resumes_at
+        """
         self._refresh_if_needed()
         now = datetime.now(timezone.utc)
+        window = timedelta(minutes=self.window_minutes)
         upcoming = []
 
         for event in self._cached_events:
@@ -136,13 +151,26 @@ class NewsFilter:
                 event_time = self._parse_event_time(event["date"])
             except (KeyError, ValueError):
                 continue
-            if event_time > now:
-                upcoming.append((event_time, event.get("title", "Unknown")))
+            # Include events still within the post-event blackout window
+            if event_time + window > now:
+                upcoming.append((event_time, event))
 
         if not upcoming:
             return None
 
         upcoming.sort(key=lambda x: x[0])
-        t, title = upcoming[0]
-        delta_min = int((t - now).total_seconds() / 60)
-        return f"{title} at {t.strftime('%H:%M UTC')} (in {delta_min} min)"
+        event_time, event = upcoming[0]
+
+        is_blackout = abs((now - event_time).total_seconds()) <= window.total_seconds()
+        countdown = max(0, int((event_time - now).total_seconds()))
+        resumes_at = (event_time + window) if is_blackout else None
+
+        return {
+            "title": event.get("title", "Unknown"),
+            "scheduled_utc": event_time,
+            "countdown_seconds": countdown,
+            "impact": event.get("impact", "High"),
+            "currency": event.get("country", "USD"),
+            "is_blackout_active": is_blackout,
+            "resumes_at": resumes_at,
+        }
