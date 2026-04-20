@@ -214,7 +214,7 @@ def main():
                     continue
 
                 # Get H4 trend bias, then generate entry-timeframe signal
-                htf_bias = strategy.check_htf_trend(df_h4)
+                htf_bias, _, _ = strategy.check_htf_trend(df_h4)
                 logger.info(f"H4 trend bias: {htf_bias}")
                 signal, atr = strategy.get_signal(df, htf_bias=htf_bias)
 

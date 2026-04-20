@@ -93,27 +93,28 @@ class TradingStrategy:
         """
         Determine the H4 trend direction using the same EMA pair.
 
-        Returns "BULLISH", "BEARISH", or "NEUTRAL".
+        Returns (bias, fast_ema_value, slow_ema_value) where bias is
+        "BULLISH", "BEARISH", or "NEUTRAL".
         - BULLISH : fast EMA > slow EMA on H4 — only BUY signals pass the filter.
         - BEARISH : fast EMA < slow EMA on H4 — only SELL signals pass the filter.
         - NEUTRAL : not enough data; filter is bypassed (no signals blocked).
         """
         if df_h4 is None or len(df_h4) < self.slow_ema + 5:
             logger.warning("H4 trend filter: not enough H4 bars — filter bypassed.")
-            return "NEUTRAL"
+            return "NEUTRAL", 0.0, 0.0
 
         df = df_h4.copy()
         df["ema_fast"] = self.calculate_ema(df["close"], self.fast_ema)
         df["ema_slow"] = self.calculate_ema(df["close"], self.slow_ema)
 
-        latest_fast = df["ema_fast"].iloc[-1]
-        latest_slow = df["ema_slow"].iloc[-1]
+        latest_fast = float(df["ema_fast"].iloc[-1])
+        latest_slow = float(df["ema_slow"].iloc[-1])
 
         if latest_fast > latest_slow:
-            return "BULLISH"
+            return "BULLISH", latest_fast, latest_slow
         elif latest_fast < latest_slow:
-            return "BEARISH"
-        return "NEUTRAL"
+            return "BEARISH", latest_fast, latest_slow
+        return "NEUTRAL", latest_fast, latest_slow
 
     def get_signal(self, df, htf_bias="NEUTRAL"):
         """

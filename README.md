@@ -1,6 +1,7 @@
-# XAUUSD AI Trading Bot — Documentation
+# XAUUSD Sentinel — Trading Bot & Dashboard
 
-A trend-following automated trading bot for Gold (XAUUSD) on Exness MT5.
+A trend-following automated trading bot for Gold (XAUUSD) on Exness MT5,
+paired with a real-time web dashboard (FastAPI backend + Next.js frontend).
 Uses EMA crossover + RSI momentum filter + ATR-based risk management,
 with an H4 trend filter, news blackout window, and built-in backtesting tools.
 
@@ -12,12 +13,15 @@ with an H4 trend filter, news blackout window, and built-in backtesting tools.
 2. [Installation](#2-installation)
 3. [Configuration](#3-configuration)
 4. [Running the Live Bot](#4-running-the-live-bot)
-5. [Exporting Data from MT5](#5-exporting-data-from-mt5)
-6. [Backtesting](#6-backtesting)
-7. [EMA Optimization](#7-ema-optimization)
-8. [Strategy Overview](#8-strategy-overview)
-9. [File Reference](#9-file-reference)
-10. [Frontend Collaboration Roadmap](#10-frontend-collaboration-roadmap)
+5. [Running the Dashboard API](#5-running-the-dashboard-api)
+6. [Running the Frontend](#6-running-the-frontend)
+7. [Admin Dashboard Features](#7-admin-dashboard-features)
+8. [Exporting Data from MT5](#8-exporting-data-from-mt5)
+9. [Backtesting](#9-backtesting)
+10. [EMA Optimization](#10-ema-optimization)
+11. [Strategy Overview](#11-strategy-overview)
+12. [File Reference](#12-file-reference)
+13. [Dashboard Feature Roadmap](#13-dashboard-feature-roadmap)
 
 ---
 
@@ -26,10 +30,11 @@ with an H4 trend filter, news blackout window, and built-in backtesting tools.
 | App | Purpose | Download |
 |---|---|---|
 | MetaTrader 5 | Trading platform (Exness) | Via Exness Personal Area |
-| Python 3.10+ | Runs the bot | python.org/downloads |
+| Python 3.10+ | Runs the bot and dashboard API | python.org/downloads |
+| Node.js 18+ | Dashboard frontend (Next.js) | nodejs.org |
 | VS Code (optional) | Edit config files | code.visualstudio.com |
 
-> **Note:** The bot uses the official `MetaTrader5` Python library — no `.ex5` files or third-party bridges needed.
+> **Note:** The `MetaTrader5` Python library is Windows-only. The dashboard API can run on any OS, but the bot runner requires Windows to connect to MT5.
 
 ---
 
@@ -45,13 +50,40 @@ with an H4 trend filter, news blackout window, and built-in backtesting tools.
 - **Important:** check "Add Python to PATH" during installation
 - Verify in Command Prompt: `python --version`
 
-### Step 3 — Install Dependencies
+### Step 3 — Install Frontend Dependencies
 
 ```
-pip install MetaTrader5 pandas numpy requests
+cd dashboard
+npm install
+cd ..
 ```
 
-> `requests` is required for the news filter. The other three were already needed.
+### Step 4 — Install Python Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+This installs everything needed for both the trading bot and the dashboard API
+(MetaTrader5, pandas, FastAPI, SQLAlchemy, JWT auth, WebSocket support, etc.).
+
+### Step 5 — Configure Environment
+
+Copy the example env file and fill in your values:
+
+```
+cp .env.example .env
+```
+
+Key variables to set:
+
+| Variable | Description |
+|---|---|
+| `SECRET_KEY` | Random 64-char hex string for JWT signing |
+| `DASHBOARD_USERNAME` | Login username for the web dashboard |
+| `DASHBOARD_PASSWORD` | Login password (plain text for dev, bcrypt hash for prod) |
+| `CORS_ORIGINS` | Frontend URL allowed to connect (default: `http://localhost:3000`) |
+| `DATABASE_URL` | SQLite default: `sqlite+aiosqlite:///./sentinel.db` |
 
 ---
 
@@ -89,7 +121,6 @@ Key settings you may want to change:
 > **Always test on a demo account first before using real money.**
 
 ```
-cd C:\xauusd_bot_v2
 python main_bot.py
 ```
 
@@ -102,9 +133,171 @@ What the bot does each cycle:
 4. Skips if H4 trend opposes the signal (e.g. H4 bearish blocks BUY)
 5. Calculates lot size, SL, and TP — then places the trade via MT5
 
+> The bot can also be run headlessly through the dashboard API (see Section 5).
+> When running via the API, the bot runner starts automatically on server startup.
+
 ---
 
-## 5. Exporting Data from MT5
+## 5. Running the Dashboard API
+
+The dashboard API is a FastAPI server that runs the bot in the background and
+exposes real-time data over HTTP + WebSocket to the frontend.
+
+### Start the server
+
+```
+uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+The server will:
+- Initialise the SQLite database (`sentinel.db`)
+- Start the bot runner (connects to MT5, begins price polling + strategy cycles)
+- Serve the REST API at `http://localhost:8000`
+- Expose interactive API docs at `http://localhost:8000/docs`
+
+### Authentication
+
+All API endpoints (except `/health`) require a JWT. Obtain one via:
+
+```
+POST /api/auth/login
+{"username": "admin", "password": "changeme"}
+```
+
+Returns `{"access_token": "...", "token_type": "bearer"}`.
+
+### WebSocket Live Stream
+
+Connect to receive all real-time events:
+
+```
+ws://localhost:8000/ws?token=<your-jwt>
+```
+
+Events emitted:
+
+| Event | Trigger |
+|---|---|
+| `price_update` | Every 5 seconds (bid/ask/spread) |
+| `signal_update` | After each strategy cycle |
+| `position_update` | When floating P&L changes by more than $1 |
+| `trade_opened` | Immediately when a trade is placed |
+| `trade_closed` | When a position hits TP, SL, or is closed manually |
+| `bot_status` | On any bot status change |
+
+### Health Check
+
+```
+GET /health
+```
+
+Returns `{"status": "ok", "ws_connections": <n>}`.
+
+---
+
+## 6. Running the Frontend
+
+```
+cd dashboard
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser. Log in with the credentials from your `.env` file.
+
+### Frontend structure
+
+```
+dashboard/
+├── src/app/
+│   ├── page.tsx                Main dashboard (monitoring)
+│   ├── login/page.tsx          Login page
+│   ├── account/page.tsx        User profile & settings
+│   ├── admin/page.tsx          Subscriber management
+│   ├── trades/page.tsx         Trade history with filters & stats
+│   ├── analytics/page.tsx      Performance analytics & session heatmap
+│   └── settings/page.tsx       Bot configuration (remote control)
+├── src/components/widgets/
+│   ├── SignalFeed.tsx          Live signal + indicator values
+│   ├── HTFBiasPanel.tsx        H4 trend direction + EMA values
+│   ├── NewsCountdown.tsx       Next news event + countdown
+│   ├── PositionCards.tsx       Open trades with TP progress + R-multiple
+│   ├── DrawdownGauge.tsx       Daily drawdown gauge + account summary
+│   ├── KillSwitch.tsx          Emergency halt/resume + bot status
+│   ├── EquityChart.tsx         Equity curve time-series (Lightweight Charts)
+│   └── LotCalculator.tsx       Live lot size + what-if calculator
+├── src/lib/
+│   ├── api.ts                  REST API client (all 18+ endpoints)
+│   └── types.ts                TypeScript types mirroring Python schemas
+├── src/hooks/
+│   └── useWebSocket.ts         Auto-reconnecting WebSocket hook
+└── src/components/ui/
+    ├── button.tsx, card.tsx, badge.tsx, etc.
+    └── skeleton.tsx            Loading state component
+```
+
+---
+
+---
+
+## 7. Admin Dashboard Features
+
+### Main Dashboard (`/`)
+The real-time monitoring dashboard with 8 widgets:
+1. **Signal Feed** — Current signal (BUY/SELL/HOLD) with EMA, RSI, ATR values
+2. **H4 Bias Panel** — Higher timeframe trend direction + EMA values
+3. **News Countdown** — Next economic event + live blackout timer
+4. **Position Cards** — All open trades with TP progress, P&L, R-multiple
+5. **Drawdown Gauge** — Daily risk used vs 5% limit
+6. **Bot Control** — Emergency halt/resume + bot status
+7. **Equity Chart** — Balance vs equity time-series with period selector
+8. **Lot Calculator** — Live lot size + what-if risk simulator
+
+**Navigation:** 
+- "Tools" dropdown → Trade History, Analytics, Bot Settings
+- "Account" → Profile, password change, Telegram setup
+- "Subscribers" → Manage customers (Plan 1 & Plan 2)
+
+### Trade History (`/trades`)
+Browse all executed trades with advanced filtering:
+- **Filters:** Last 7/30/90 days or all-time; wins only / losses only / all results
+- **Columns:** Ticket ID, entry/exit prices, P&L, R-multiple, duration, close reason
+- **Stats:** Total trades, win count, loss count, total P&L
+- **Export:** CSV button (ready for implementation)
+
+### Performance Analytics (`/analytics`)
+Comprehensive trading statistics:
+- **KPI Cards:** Total trades, win rate %, total P&L, profit factor
+- **Monthly Chart:** P&L by month with trade counts
+- **Session Heatmap:** Win rate breakdown by trading hour (London, New York, etc.)
+- **Trade Averages:** Avg win, avg loss, profit factor interpretation
+- **Time Period Selector:** 7/30/90 days or all-time
+
+### Bot Settings (`/settings`)
+Remote bot configuration — all changes apply immediately:
+- **Risk:** Risk per trade (0.1–5%), max daily drawdown (1–20%)
+- **Session Hours:** London & New York UTC times
+- **News Filter:** Blackout window in minutes
+- **Indicators:** EMA fast/slow periods, RSI period, ATR period, min ATR filter
+- **Feedback:** Success/error messages, warning about real-time application
+
+### Subscriber Management (`/admin`)
+Manage paying customers for Plans 1 & 2:
+- **Create:** Add subscriber with name, email, plan choice
+- **For Telegram Plan:** Enter subscriber's Telegram chat ID
+- **For EA Plan:** Auto-generate API key, copy and send to client
+- **Actions:** Activate/deactivate, rotate API key, delete
+- **Stats:** Total subscribers, active count, inactive count
+- **View:** All subscriber details in one place
+
+### Account Settings (`/account`)
+User profile and preferences:
+- **Profile:** View username and join date
+- **Security:** Change password (old password must match)
+- **Notifications:** Set personal Telegram chat ID for alert messages
+
+---
+
+## 8. Exporting Data from MT5
 
 The backtester and optimizer both require a CSV file of historical OHLCV bars.
 
@@ -143,7 +336,7 @@ Find the data folder via: MT5 menu → File → Open Data Folder
 
 ---
 
-## 6. Backtesting
+## 9. Backtesting
 
 The backtester simulates the strategy over historical data and prints a performance report.
 
@@ -183,7 +376,7 @@ A **Profit Factor above 1.3** indicates a positive expectancy. Below 1.0 means t
 
 ---
 
-## 7. EMA Optimization
+## 10. EMA Optimization
 
 The optimizer grid-searches all meaningful EMA fast/slow combinations and automatically validates the winner on a held-out 20% test set to check for overfitting.
 
@@ -233,7 +426,7 @@ SLOW_EMA_PERIOD = 25
 
 ---
 
-## 8. Strategy Overview
+## 11. Strategy Overview
 
 | Component | Detail |
 |---|---|
@@ -253,11 +446,13 @@ SLOW_EMA_PERIOD = 25
 
 ---
 
-## 9. File Reference
+## 12. File Reference
+
+### Bot Engine
 
 | File | Purpose |
 |---|---|
-| `main_bot.py` | Main execution loop — connects to MT5, coordinates all components |
+| `main_bot.py` | Standalone bot loop — connects to MT5, coordinates all components |
 | `strategy.py` | All signal logic: EMA, RSI, ATR, H4 filter, session filter |
 | `mt5_connector.py` | MT5 connection, trade execution, data fetching |
 | `news_filter.py` | Fetches ForexFactory calendar and blocks trades near events |
@@ -266,29 +461,133 @@ SLOW_EMA_PERIOD = 25
 | `config.py` | All settings — account credentials, strategy params, risk rules |
 | `logger.py` | File and console logging, trade log writer |
 
+### Dashboard API (`api/`)
+
+| File | Purpose |
+|---|---|
+| `api/main.py` | FastAPI app entry point — lifespan, CORS, `/ws` WebSocket endpoint |
+| `api/bot_runner.py` | Async bot runner — price poller + strategy cycle, runs on startup |
+| `api/state.py` | Thread-safe in-memory state shared between bot runner and API endpoints |
+| `api/ws_manager.py` | WebSocket connection manager — broadcasts 6 live event types |
+| `api/auth.py` | JWT creation/validation + bcrypt password hashing |
+| `api/database.py` | Async SQLAlchemy engine, session factory, `init_db()` |
+| `api/models.py` | ORM models: `User`, `Trade`, `BotStateDB` |
+| `api/schemas.py` | Pydantic schemas for all API request/response contracts |
+| `api/routers/auth_router.py` | `POST /api/auth/login` — returns JWT on valid credentials |
+| `api/routers/user_router.py` | `GET /api/user/me` — current user profile; `POST /api/user/change-password` — password change; `PATCH /api/user/telegram` — update telegram ID |
+| `api/routers/signal_router.py` | `GET /api/signal` — current signal + indicators; `GET /api/signal/history` — last N signals |
+| `api/routers/htf_router.py` | `GET /api/htf` — H4 trend bias (BULLISH/BEARISH/NEUTRAL) + underlying H4 EMA values |
+| `api/routers/news_router.py` | `GET /api/news` — next high-impact USD event, countdown seconds, blackout status |
+| `api/routers/positions_router.py` | `GET /api/positions` — all open positions; `GET /api/positions/{ticket}` — single position |
+| `api/routers/account_router.py` | `GET /api/account` — balance, equity, margin, daily drawdown %, max daily risk USD |
+| `api/routers/bot_router.py` | `GET /api/bot/status`; `POST /api/bot/halt` — kill switch; `POST /api/bot/resume` — clear halt |
+| `api/routers/equity_router.py` | `GET /api/equity?period=1d\|7d\|30d\|all` — time-series equity snapshots for the chart |
+| `api/routers/lotsize_router.py` | `GET /api/lotsize` — live lot size; `POST /api/lotsize/calculate` — interactive what-if calculator |
+| `api/routers/trades_router.py` | `GET /api/trades?days=30&outcome=WIN` — trade history with filters; `GET /api/trades/analytics?days=30` — performance stats |
+| `api/routers/settings_router.py` | `GET /api/settings` — current bot configuration; `PATCH /api/settings` — update risk, hours, indicators in real-time |
+| `api/routers/admin_router.py` | `POST /api/admin/subscribers` — create; `GET /api/admin/subscribers` — list; `PATCH /api/admin/subscribers/{id}` — update; `DELETE /api/admin/subscribers/{id}` — delete; `POST /api/admin/subscribers/{id}/rotate-key` — new API key |
+| `api/routers/ea_router.py` | `GET /api/ea/ping?api_key=xxx` — heartbeat; `GET /api/ea/signal?api_key=xxx` — pending signal; `POST /api/ea/signal/{id}/ack?api_key=xxx` — acknowledge |
+
+### Config & Environment
+
+| File | Purpose |
+|---|---|
+| `.env` | Runtime secrets (not committed) |
+| `.env.example` | Template — copy to `.env` and fill in values |
+| `requirements.txt` | All Python dependencies (bot + API) |
+
 ---
 
-## 10. Frontend Collaboration Roadmap
+## 13. Dashboard Feature Roadmap
 
-I am currently looking for a **Frontend Developer** to help transform this backend engine into a professional-grade trading dashboard. I am providing all **UI/UX Design, Brand Identity, and Figma Mockups**.
+### Phase 1 — Real-Time Monitoring ✅ COMPLETE
 
-### Phase 1: Real-Time Monitoring (The Dashboard)
-- [ ] **Live Trade Feed:** Stream active trades directly from the bot
-- [ ] **Equity & Balance Tracker:** Visualise balance vs. floating equity
-- [ ] **Status Indicator:** "Heartbeat" monitor for MT5 connection and bot state
-- [ ] **Next News Event:** Surface `news_filter.next_event()` output in the UI
+| # | Feature | Status |
+|---|---|---|
+| 0 | FastAPI backend foundation (auth, WebSocket, DB, bot runner) | ✅ Complete |
+| 1 | Live Signal Feed widget | ✅ Complete |
+| 2 | H4 Trend Bias Panel widget | ✅ Complete |
+| 3 | News Countdown Clock widget | ✅ Complete |
+| 4 | Open Position Cards widget | ✅ Complete |
+| 5 | Daily Drawdown Gauge widget | ✅ Complete |
+| 6 | Emergency Kill Switch widget | ✅ Complete |
+| 7 | Equity Curve Chart widget | ✅ Complete |
+| 8 | Live Lot Size Calculator widget | ✅ Complete |
 
-### Phase 2: Data Visualization
-- [ ] **Performance Charts:** Entry/exit points via Lightweight Charts (TradingView) or Chart.js
-- [ ] **Strategy Metrics:** Win/loss ratios, average hold time, ATR volatility stats
-- [ ] **H4 Trend Badge:** Live display of current H4 bias (Bullish / Bearish / Neutral)
-- [ ] **Log Viewer:** Searchable, filtered interface for `trade_log.txt`
+**Admin Dashboard Features:**
+- 8 real-time monitoring widgets
+- Live WebSocket updates (6 event types)
+- Professional, responsive UI with Tailwind CSS
+- Loading states, animations, error handling
 
-### Phase 3: Control & Configuration
-- [ ] **Remote Config:** Adjust EMA periods, RSI thresholds, and risk % without touching code
-- [ ] **Emergency Kill-Switch:** Panic button to close all open positions and pause the bot
-- [ ] **Auth Layer:** Secure login for private dashboard access
+### Signal Distribution System ✅ COMPLETE
 
----
+| Step | Feature | Status |
+|---|---|---|
+| 1 | Subscriber model + admin CRUD endpoints | ✅ Complete |
+| 2 | Telegram broadcaster (Plan 1 — $40–50/mo) | ✅ Complete |
+| 3 | EA signal queue + ack endpoints (Plan 2 — $90–120/mo) | ✅ Complete |
+| 4 | MQL5 Expert Advisor (`SentinelCopier.mq5`) | ✅ Complete |
+| 5 | Admin dashboard page (`/admin`) | ✅ Complete |
 
-**Interested in collaborating?** Check out the backend logic in `main_bot.py` and `strategy.py`, then open an issue or send a DM.
+**How It Works:**
+- **Plan 1 — Telegram Signals**: Subscribers receive formatted messages on every BUY/SELL signal (requires `TELEGRAM_BOT_TOKEN` in `.env`)
+- **Plan 2 — EA Copy Trading**: Subscribers run `SentinelCopier.mq5` on their MT5, EA polls signals every 30s, auto-places trades with their own risk
+- **Admin Workflow**: Create subscriber → choose plan → auto-generate API key → share with client
+
+### Phase 2 — Analytics & Journal ✅ COMPLETE
+
+| Feature | Page | Status |
+|---|---|---|
+| Trade History with filters | `/trades` | ✅ Complete |
+| Performance Analytics (win rate, profit factor, monthly breakdown) | `/analytics` | ✅ Complete |
+| Session Heatmap (London, New York performance) | `/analytics` | ✅ Complete |
+| Trade statistics & summary | `/trades` | ✅ Complete |
+| Account settings & password change | `/account` | ✅ Complete |
+| Telegram notifications setup | `/account` | ✅ Complete |
+
+**New Pages:**
+- **`/trades`** — Full trade history table with period/result filters, stats cards (total trades, wins, losses, total P&L)
+- **`/analytics`** — Performance dashboard with KPI cards, monthly breakdown, session win rates, trade averages, profit factor
+- **`/account`** — User profile, change password, update Telegram chat ID for notifications
+- **`/settings`** — Remote bot configuration (risk %, daily drawdown, trading hours, news blackout, technical indicators)
+
+### Phase 3 — Configuration & Control ✅ COMPLETE
+
+| Feature | Page | Status |
+|---|---|---|
+| Remote bot configuration (live parameter updates) | `/settings` | ✅ Complete |
+| Risk management settings | `/settings` | ✅ Complete |
+| Trading session hours (UTC) | `/settings` | ✅ Complete |
+| News filter & blackout window | `/settings` | ✅ Complete |
+| Technical indicator tuning | `/settings` | ✅ Complete |
+| Bot emergency control (halt/resume) | `/` (KillSwitch widget) | ✅ Complete |
+
+**Remote Control Features:**
+- Change risk % per trade (0.1–5%)
+- Adjust daily drawdown limit (1–20%)
+- Configure trading hours (London & New York sessions)
+- Tune EMA periods, RSI, ATR parameters
+- All changes apply in real-time within 5 seconds
+- No server restart required
+- Active positions unaffected by parameter changes
+
+### Future Enhancements (Phase 4+)
+- CSV export from trade history
+- Trade notes & manual journaling
+- Multi-user support (invite links)
+- Dashboard customization (widget layout)
+- Mobile app (React Native)
+- Advanced backtesting UI
+- API webhooks for external integrations
+
+### Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend API | FastAPI + uvicorn |
+| Database | SQLite (dev) / PostgreSQL (prod) via SQLAlchemy async |
+| Auth | JWT (python-jose) + bcrypt (passlib) |
+| Real-time | WebSocket (FastAPI native) |
+| Frontend | Next.js + Tailwind CSS + shadcn/ui |
+| Charts | Lightweight Charts (TradingView library) |

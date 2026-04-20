@@ -1,4 +1,26 @@
+# ── Existing bot dependencies ─────────────────────────────────────────────────
 pandas
+numpy
 pandas-ta
-python-dotenv
 requests
+python-dotenv
+
+# MetaTrader5 only installs on Windows — excluded from Docker/Linux builds
+# Install manually on your Windows VPS: pip install MetaTrader5
+# MetaTrader5
+
+# ── API server ────────────────────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.32.1        # includes websockets + httptools
+python-multipart==0.0.20         # required for OAuth2 form-based login
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.36
+aiosqlite==0.20.0                # async SQLite driver
+
+# ── Authentication ────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0  # JWT encoding / decoding
+passlib[bcrypt]==1.7.4            # password hashing
+
+# ── Async HTTP (Telegram broadcaster) ─────────────────────────────────────────
+httpx==0.27.2
