@@ -32,7 +32,7 @@ export default function LoginPage() {
         {/* Logo / title */}
         <div className="text-center space-y-1">
           <div className="text-3xl font-bold text-white tracking-tight">
-            XAUUSD <span className="text-amber-400">Sentinel</span>
+            AurumEdge <span className="text-amber-400">Precision Trading Bot</span>
           </div>
           <p className="text-zinc-500 text-sm">Trading Dashboard</p>
         </div>

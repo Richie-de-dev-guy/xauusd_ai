@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "XAUUSD Sentinel",
-  description: "Automated Gold trading bot dashboard",
+  title: "AurumEdge",
+  description: "Precision Trading Bot for XAUUSD",
 };
 
 export default function RootLayout({

@@ -44,3 +44,6 @@ async def get_db():
     """FastAPI dependency that yields a DB session."""
     async with AsyncSessionLocal() as session:
         yield session
+
+# Alias to match what the routers are expecting
+get_async_session = get_db

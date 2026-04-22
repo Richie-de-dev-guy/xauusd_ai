@@ -140,3 +140,6 @@ class SharedBotState:
 
 # ── Global singleton ──────────────────────────────────────────────────────────
 bot_state = SharedBotState()
+
+# Alias to match the name expected by the API routers
+shared_state = bot_state
