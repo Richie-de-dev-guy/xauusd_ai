@@ -20,7 +20,8 @@ export function NewsCountdown({ data }: Props) {
   const [countdown, setCountdown] = useState(data?.countdown_seconds ?? null)
 
   useEffect(() => {
-    setCountdown(data?.countdown_seconds ?? null)
+    const id = setTimeout(() => setCountdown(data?.countdown_seconds ?? null), 0)
+    return () => clearTimeout(id)
   }, [data?.countdown_seconds])
 
   useEffect(() => {

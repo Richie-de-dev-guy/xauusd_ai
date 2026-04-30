@@ -1,4 +1,4 @@
-# XAUUSD Sentinel — Trading Bot & Dashboard
+# AurumEdge — Trading Bot & Dashboard
 
 A trend-following automated trading bot for Gold (XAUUSD) on Exness MT5,
 paired with a real-time web dashboard (FastAPI backend + Next.js frontend).

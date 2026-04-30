@@ -1,7 +1,7 @@
 # Dashboard Enhancements
 
 ## Overview
-Enhanced the XAUUSD Sentinel main dashboard with improved loading states, responsive design, smooth animations, and better visual hierarchy.
+Enhanced the AurumEdge main dashboard with improved loading states, responsive design, smooth animations, and better visual hierarchy.
 
 ## Key Improvements
 

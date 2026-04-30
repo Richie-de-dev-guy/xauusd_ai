@@ -77,7 +77,7 @@ export default function AnalyticsPage() {
     losses: stats.losses,
     total: stats.wins + stats.losses,
     winRate: (stats.wins / (stats.wins + stats.losses) * 100).toFixed(1),
-    pnl: stats.pnl.toFixed(2),
+    pnl: stats.pnl,
   }))
 
   return (
@@ -188,7 +188,7 @@ export default function AnalyticsPage() {
                         <p className="text-xs text-zinc-500">{session.total} trades</p>
                       </div>
                       <p className={`text-lg font-bold ${session.pnl >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                        ${session.pnl}
+                        ${session.pnl.toFixed(2)}
                       </p>
                     </div>
 

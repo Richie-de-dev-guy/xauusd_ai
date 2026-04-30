@@ -1,8 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import { api } from "@/lib/api"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Plus, Trash2, RotateCcw, Users, ChevronLeft, Copy, Check } from "lucide-react"
@@ -184,7 +183,7 @@ export default function AdminPage() {
           <ChevronLeft className="w-5 h-5" />
         </button>
         <span className="font-bold text-lg tracking-tight">
-          XAUUSD <span className="text-amber-400">Sentinel</span>
+          AurumEdge
           <span className="text-zinc-500 font-normal text-base ml-2">/ Subscribers</span>
         </span>
       </header>

@@ -66,7 +66,10 @@ export default function DashboardPage() {
     setRefreshing(false)
   }, [router])
 
-  useEffect(() => { fetchAll() }, [fetchAll])
+  useEffect(() => {
+    const id = setTimeout(() => { void fetchAll() }, 0)
+    return () => clearTimeout(id)
+  }, [fetchAll])
 
   // WebSocket live updates
   const handleWS = useCallback((msg: WSMessage) => {
@@ -106,7 +109,7 @@ export default function DashboardPage() {
       <header className="border-b border-zinc-800 px-4 md:px-6 py-3 flex items-center justify-between sticky top-0 bg-zinc-950/90 backdrop-blur z-10">
         <div className="flex items-center gap-2 md:gap-3 min-w-0">
           <span className="font-bold text-base md:text-lg tracking-tight truncate">
-            XAUUSD <span className="text-amber-400">Sentinel</span>
+            AurumEdge
           </span>
           <Separator orientation="vertical" className="h-4 bg-zinc-700 hidden sm:block" />
           <div className="flex items-center gap-1.5 shrink-0">

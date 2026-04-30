@@ -316,7 +316,7 @@ export default function SettingsPage() {
 
         <div className="bg-amber-950/30 border border-amber-700/30 rounded-lg p-4">
           <p className="text-xs text-amber-400">
-            ⚠️ Bot changes take effect on the next strategy cycle (within 5 seconds). Changes are applied in real-time but won't affect active positions.
+            Bot changes take effect on the next strategy cycle (within 5 seconds). Changes are applied in real-time but won&apos;t affect active positions.
           </p>
         </div>
       </main>

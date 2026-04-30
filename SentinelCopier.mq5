@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //|  SentinelCopier.mq5                                              |
-//|  XAUUSD Sentinel — Plan 2 Copy Trading EA                        |
+//|  AurumEdge — Plan 2 Copy Trading EA                              |
 //|                                                                  |
 //|  Polls the Sentinel API every N seconds for a pending signal.    |
 //|  When a signal arrives, places a market order with the           |
@@ -14,7 +14,7 @@
 //|    PollSeconds — how often to check for a new signal             |
 //|    MagicNumber — unique ID for orders placed by this EA          |
 //+------------------------------------------------------------------+
-#property copyright "XAUUSD Sentinel"
+#property copyright "AurumEdge"
 #property version   "1.00"
 #property strict
 

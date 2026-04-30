@@ -44,7 +44,7 @@ def _format_signal_message(
     emoji = _signal_emoji(signal)
     sl_dist = abs(entry - sl)
     return (
-        f"{emoji} <b>XAUUSD Sentinel Signal — {signal}</b>\n"
+        f"{emoji} <b>AurumEdge Signal — {signal}</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
         f"📌 Symbol:      <code>{symbol}</code>\n"
         f"🎯 Direction:   <b>{signal}</b>\n"

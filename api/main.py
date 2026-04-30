@@ -35,7 +35,7 @@ async def lifespan(app: FastAPI):
 # ── App ───────────────────────────────────────────────────────────────────────
 
 app = FastAPI(
-    title="XAUUSD Sentinel",
+    title="AurumEdge",
     version="1.0.0",
     description="Automated Gold trading bot dashboard API",
     lifespan=lifespan,
