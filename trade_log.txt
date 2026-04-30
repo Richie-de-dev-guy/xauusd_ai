@@ -956,3 +956,45 @@
 [2026-04-22 14:46:02] INFO - XAUUSD | Bid: 4757.27 | Ask: 4757.66 | Balance: 60419.18 | Equity: 60419.18
 [2026-04-22 14:46:02] INFO - H4 trend bias: BEARISH
 [2026-04-22 14:46:02] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-30 09:58:41] INFO - ============================================================
+[2026-04-30 09:58:41] INFO - XAUUSD Trading Bot Starting...
+[2026-04-30 09:58:41] INFO - ============================================================
+[2026-04-30 09:58:45] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 09:58:45] ERROR - Failed to connect to MT5. Exiting.
+[2026-04-30 09:59:51] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:00:21] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:00:51] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:01:21] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:01:54] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:02:24] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:02:54] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:02:58] INFO - Disconnected from MT5.
+[2026-04-30 10:04:53] INFO - ============================================================
+[2026-04-30 10:04:53] INFO - XAUUSD Trading Bot Starting...
+[2026-04-30 10:04:53] INFO - ============================================================
+[2026-04-30 10:04:53] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:04:53] ERROR - Failed to connect to MT5. Exiting.
+[2026-04-30 10:05:11] INFO - ============================================================
+[2026-04-30 10:05:11] INFO - XAUUSD Trading Bot Starting...
+[2026-04-30 10:05:11] INFO - ============================================================
+[2026-04-30 10:05:13] ERROR - MT5 initialize() failed. Error: (-6, 'Terminal: Authorization failed')
+[2026-04-30 10:05:13] ERROR - Failed to connect to MT5. Exiting.
+[2026-04-30 10:05:56] INFO - ============================================================
+[2026-04-30 10:05:56] INFO - XAUUSD Trading Bot Starting...
+[2026-04-30 10:05:56] INFO - ============================================================
+[2026-04-30 10:06:00] INFO - Connected to MT5 | Account: 435666202 | Server: Exness-MT5Trial9 | Balance: 61235.0
+[2026-04-30 10:06:00] INFO - Symbol: XAUUSDm | Point: 0.001 | Min Lot: 0.01 | Max Lot: 200.0
+[2026-04-30 10:06:00] INFO - Strategy: EMA(7/25) + RSI(14) + ATR(14)
+[2026-04-30 10:06:00] INFO - Risk: 1.0% per trade | RR: 1:2.0
+[2026-04-30 10:06:00] INFO - Checking every 300 seconds...
+[2026-04-30 10:06:00] INFO - ------------------------------------------------------------
+[2026-04-30 10:06:00] INFO - New day: 2026-04-30 | Starting balance: 61235.00
+[2026-04-30 10:06:00] INFO - XAUUSD | Bid: 4618.73 | Ask: 4619.04 | Balance: 61235.00 | Equity: 61235.00
+[2026-04-30 10:06:02] INFO - NewsFilter: Loaded 6 high-impact USD events for 2026-04-30.
+[2026-04-30 10:06:02] INFO - H4 trend bias: BEARISH
+[2026-04-30 10:06:02] INFO - Signal: HOLD — No trade opportunity.
+[2026-04-30 10:06:18] INFO - Connected to MT5 | Account: 435666202 | Server: Exness-MT5Trial9 | Balance: 61235.0
+[2026-04-30 10:06:18] INFO - NewsFilter: Loaded 6 high-impact USD events for 2026-04-30.
+[2026-04-30 10:11:02] INFO - XAUUSD | Bid: 4616.86 | Ask: 4617.17 | Balance: 61235.00 | Equity: 61235.00
+[2026-04-30 10:11:02] INFO - H4 trend bias: BEARISH
+[2026-04-30 10:11:03] INFO - Signal: HOLD — No trade opportunity.

@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { api } from "@/lib/api"
@@ -15,7 +16,9 @@ export default function LoginPage() {
     e.preventDefault()
     setLoading(true)
     setError(null)
+
     try {
+      localStorage.removeItem("sentinel_token")
       const { access_token } = await api.login(username, password)
       localStorage.setItem("sentinel_token", access_token)
       router.push("/")
@@ -29,7 +32,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
       <div className="w-full max-w-sm space-y-6 px-4">
-        {/* Logo / title */}
         <div className="text-center space-y-1">
           <div className="text-3xl font-bold text-white tracking-tight">
             AurumEdge <span className="text-amber-400">Precision Trading Bot</span>
@@ -60,7 +62,7 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition-colors"
-              placeholder="••••••••"
+              placeholder="changeme"
             />
           </div>
 
@@ -73,14 +75,20 @@ export default function LoginPage() {
             className="w-full bg-amber-500 hover:bg-amber-400 text-black font-semibold"
             disabled={loading}
           >
-            {loading ? "Signing in…" : "Sign In"}
+            {loading ? "Signing in..." : "Sign In"}
           </Button>
         </form>
 
-        <p className="text-center text-xs text-zinc-700">
-          Credentials set via <code className="text-zinc-500">DASHBOARD_USERNAME</code> /
-          <code className="text-zinc-500"> DASHBOARD_PASSWORD</code> env vars
-        </p>
+        <div className="space-y-1 text-center text-xs text-zinc-700">
+          <p>
+            Credentials are controlled by <span className="font-mono text-zinc-500">DASHBOARD_USERNAME</span> and{" "}
+            <span className="font-mono text-zinc-500">DASHBOARD_PASSWORD</span>.
+          </p>
+          <p>
+            Current fallback credentials for this local setup: <span className="font-mono text-zinc-400">admin</span> /{" "}
+            <span className="font-mono text-zinc-400">changeme</span>
+          </p>
+        </div>
       </div>
     </div>
   )
