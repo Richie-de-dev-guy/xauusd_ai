@@ -3,8 +3,8 @@
 # ============================================================
 
 # --- MT5 Account Details (Exness) ---
-MT5_LOGIN    = 435666202
-MT5_PASSWORD = "Effiom3009$1"
+MT5_LOGIN    = Your MT5 Login
+MT5_PASSWORD = "MT5_PASSWORD"
 MT5_SERVER   = "Exness-MT5Trial9"
 MT5_PATH     = r"C:\Program Files\MetaTrader 5\terminal64.exe"
 
